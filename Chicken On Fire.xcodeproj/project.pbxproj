@@ -1,0 +1,1146 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B2166C28E56B5FD14A58F82 /* Pods_Chicken_On_Fire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F77529237B81AACA1C906BA4 /* Pods_Chicken_On_Fire.framework */; };
+		CE121C73273E98900093FD4B /* CustomizationCellSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE121C71273E98900093FD4B /* CustomizationCellSingle.swift */; };
+		CE121C74273E98900093FD4B /* CustomizationCellSingle.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE121C72273E98900093FD4B /* CustomizationCellSingle.xib */; };
+		CE15B37E27428407001A4F58 /* BasketViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15B37C27428407001A4F58 /* BasketViewCell.swift */; };
+		CE15B37F27428407001A4F58 /* BasketViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE15B37D27428407001A4F58 /* BasketViewCell.xib */; };
+		CE1847A5274A71BA007C93AE /* PhoneVerificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1847A4274A71BA007C93AE /* PhoneVerificationManager.swift */; };
+		CE1847AA274A79D9007C93AE /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1847A9274A79D9007C93AE /* PhoneVerificationViewController.swift */; };
+		CE1847AF274A845F007C93AE /* PhoneVerificationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1847AE274A845F007C93AE /* PhoneVerificationApi.swift */; };
+		CE1847B5274BDFF8007C93AE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1847B4274BDFF8007C93AE /* SignInViewController.swift */; };
+		CE1847BE274BE3D3007C93AE /* SocialMediaButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1847BD274BE3D3007C93AE /* SocialMediaButton.xib */; };
+		CE1847C3274BE3E3007C93AE /* SocialMediaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1847C2274BE3E3007C93AE /* SocialMediaButton.swift */; };
+		CE1847CB274BEFDF007C93AE /* SignInWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1847CA274BEFDF007C93AE /* SignInWithEmailViewController.swift */; };
+		CE1847D0274BF0C9007C93AE /* UserAccountApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1847CF274BF0C9007C93AE /* UserAccountApi.swift */; };
+		CE1847D5274C02A7007C93AE /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1847D4274C02A7007C93AE /* ForgetPasswordViewController.swift */; };
+		CE1847DA274C0A6C007C93AE /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1847D9274C0A6C007C93AE /* CreateAccountViewController.swift */; };
+		CE1BB8C62746B05C0030B9DB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BB8C52746B05C0030B9DB /* CardView.swift */; };
+		CE1BB8CB2746B7E60030B9DB /* SelectAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BB8CA2746B7E60030B9DB /* SelectAddressViewController.swift */; };
+		CE1BB8D22746B8F70030B9DB /* AddressTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1BB8D02746B8F70030B9DB /* AddressTableCell.swift */; };
+		CE1BB8D32746B8F70030B9DB /* AddressTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1BB8D12746B8F70030B9DB /* AddressTableCell.xib */; };
+		CE1FBED62743ED2800CE2DBD /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FBED52743ED2800CE2DBD /* AddLocationViewController.swift */; };
+		CE1FBEDB2743FC2700CE2DBD /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FBEDA2743FC2700CE2DBD /* AddAddressViewController.swift */; };
+		CE2938ED272C86980070F395 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2938EC272C86980070F395 /* HomeViewController.swift */; };
+		CE2938F5272C870D0070F395 /* HomeHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2938F4272C870D0070F395 /* HomeHeaderViewController.swift */; };
+		CE2938FA272C876C0070F395 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2938F9272C876C0070F395 /* TabBarViewController.swift */; };
+		CE293904272C87F80070F395 /* MenuSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE293900272C87F80070F395 /* MenuSectionHeader.swift */; };
+		CE293905272C87F80070F395 /* MenuItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE293901272C87F80070F395 /* MenuItemViewCell.swift */; };
+		CE293906272C87F80070F395 /* MenuItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE293902272C87F80070F395 /* MenuItemViewCell.xib */; };
+		CE293907272C87F80070F395 /* MenuSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE293903272C87F80070F395 /* MenuSectionHeader.xib */; };
+		CE29390E272C883E0070F395 /* MenuTabBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE29390C272C883E0070F395 /* MenuTabBarCell.xib */; };
+		CE29390F272C883E0070F395 /* MenuTabBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29390D272C883E0070F395 /* MenuTabBarCell.swift */; };
+		CE293914272C88700070F395 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE293913272C88700070F395 /* MenuManager.swift */; };
+		CE293928272C8B070070F395 /* MenuApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE293927272C8B070070F395 /* MenuApi.swift */; };
+		CE324EA9273A9141001A4ABF /* CustomizationCellMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE324EA7273A9141001A4ABF /* CustomizationCellMultiple.swift */; };
+		CE324EAA273A9141001A4ABF /* CustomizationCellMultiple.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE324EA8273A9141001A4ABF /* CustomizationCellMultiple.xib */; };
+		CE324EB3273A9157001A4ABF /* CustomizationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE324EB1273A9157001A4ABF /* CustomizationSection.swift */; };
+		CE324EB4273A9157001A4ABF /* CustomizationSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE324EB2273A9157001A4ABF /* CustomizationSection.xib */; };
+		CE366F552747D5BE005169DC /* ScheduleOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366F542747D5BE005169DC /* ScheduleOrder.swift */; };
+		CE366F5C2747DE54005169DC /* FinalOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366F5A2747DE54005169DC /* FinalOrderCell.swift */; };
+		CE366F5D2747DE54005169DC /* FinalOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE366F5B2747DE54005169DC /* FinalOrderCell.xib */; };
+		CE366F622747F26E005169DC /* OrderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366F612747F26E005169DC /* OrderManager.swift */; };
+		CE366F6727480253005169DC /* ServiceChargeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366F6627480253005169DC /* ServiceChargeApi.swift */; };
+		CE366F6C27480900005169DC /* VoucherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366F6B27480900005169DC /* VoucherViewController.swift */; };
+		CE366F7127480A56005169DC /* VoucherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366F7027480A56005169DC /* VoucherApi.swift */; };
+		CE366F7627480A7C005169DC /* VoucherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE366F7527480A7C005169DC /* VoucherManager.swift */; };
+		CE489E29274FEB6B002BEEC6 /* ReviewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE489E27274FEB6B002BEEC6 /* ReviewsCell.swift */; };
+		CE489E2A274FEB6B002BEEC6 /* ReviewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE489E28274FEB6B002BEEC6 /* ReviewsCell.xib */; };
+		CE489E2F274FF18E002BEEC6 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE489E2E274FF18E002BEEC6 /* AddReviewViewController.swift */; };
+		CE504A84274531930081F94D /* UserAddressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE504A83274531930081F94D /* UserAddressManager.swift */; };
+		CE504AA92745B58E0081F94D /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE504AA82745B58E0081F94D /* CheckoutViewController.swift */; };
+		CE58ABC5272610BD008690C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58ABC4272610BD008690C1 /* AppDelegate.swift */; };
+		CE58ABC7272610BD008690C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58ABC6272610BD008690C1 /* SceneDelegate.swift */; };
+		CE58ABC9272610BD008690C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58ABC8272610BD008690C1 /* ViewController.swift */; };
+		CE58ABCC272610BD008690C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE58ABCA272610BD008690C1 /* Main.storyboard */; };
+		CE58ABCE272610BF008690C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE58ABCD272610BF008690C1 /* Assets.xcassets */; };
+		CE58ABD1272610BF008690C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE58ABCF272610BF008690C1 /* LaunchScreen.storyboard */; };
+		CE58ABDC272610BF008690C1 /* Chicken_On_FireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58ABDB272610BF008690C1 /* Chicken_On_FireTests.swift */; };
+		CE58ABE7272610BF008690C1 /* Chicken_On_FireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58ABE6272610BF008690C1 /* Chicken_On_FireUITests.swift */; };
+		CE58AC25272617FA008690C1 /* GeneralAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AC24272617FA008690C1 /* GeneralAreaViewController.swift */; };
+		CE58AC2A27261947008690C1 /* GeneralInfoApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AC2927261947008690C1 /* GeneralInfoApi.swift */; };
+		CE58AC2F27261966008690C1 /* RestaurantInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AC2E27261966008690C1 /* RestaurantInfoManager.swift */; };
+		CE58AC3927261A34008690C1 /* GeneralInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AC3827261A34008690C1 /* GeneralInfoManager.swift */; };
+		CE58AC5027261CE9008690C1 /* UserAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58AC4F27261CE9008690C1 /* UserAccountManager.swift */; };
+		CE58D043274FCC8D00572444 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58D042274FCC8D00572444 /* ReviewsViewController.swift */; };
+		CE5A1C84274D1DB100C829A9 /* FavouritesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A1C83274D1DB100C829A9 /* FavouritesApi.swift */; };
+		CE5A1C89274D23D400C829A9 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A1C88274D23D400C829A9 /* FavouritesViewController.swift */; };
+		CE72805C27473999004663F6 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72805B27473999004663F6 /* ScheduleViewController.swift */; };
+		CE75D07F2749305A004FAF26 /* OrderApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75D07E2749305A004FAF26 /* OrderApi.swift */; };
+		CE75D08427494136004FAF26 /* BookeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75D08327494136004FAF26 /* BookeyViewController.swift */; };
+		CE75D089274944C0004FAF26 /* PaymentApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75D088274944C0004FAF26 /* PaymentApi.swift */; };
+		CE912A282739386700639954 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE912A272739386700639954 /* SideMenuViewController.swift */; };
+		CE912A3B27393C2600639954 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE912A3927393C2600639954 /* SideMenuCell.swift */; };
+		CE912A3C27393C2600639954 /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE912A3A27393C2600639954 /* SideMenuCell.xib */; };
+		CE912A41273944A800639954 /* SideMenuSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE912A40273944A800639954 /* SideMenuSectionCell.xib */; };
+		CE912A46273944CC00639954 /* SideMenuSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE912A45273944CC00639954 /* SideMenuSectionCell.swift */; };
+		CE912A542739788600639954 /* MenuSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE912A532739788600639954 /* MenuSearchViewController.swift */; };
+		CE912A592739816600639954 /* CustomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE912A582739816600639954 /* CustomizeViewController.swift */; };
+		CEAB0CA6274C760B005861D4 /* RestaurantInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB0CA5274C760B005861D4 /* RestaurantInfoViewController.swift */; };
+		CEB1A01E2726CD580085A026 /* GeneralAreaMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1A01D2726CD580085A026 /* GeneralAreaMapViewController.swift */; };
+		CEB1A0232726F8470085A026 /* GeneralAreaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1A0222726F8470085A026 /* GeneralAreaManager.swift */; };
+		CEB1A0282726FA6F0085A026 /* AllowedLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1A0272726FA6F0085A026 /* AllowedLocations.swift */; };
+		CEB1A02D2726FCC40085A026 /* MyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1A02C2726FCC40085A026 /* MyExtensions.swift */; };
+		CECA9D54274139D700604F6E /* BasketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA9D53274139D700604F6E /* BasketManager.swift */; };
+		CECA9D59274150DF00604F6E /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA9D58274150DF00604F6E /* BasketViewController.swift */; };
+		CEDEFCA12736A833008716F7 /* CatergorySheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEFCA02736A833008716F7 /* CatergorySheetViewController.swift */; };
+		CEDEFCA82736B0E8008716F7 /* CategorySheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEFCA62736B0E8008716F7 /* CategorySheetCell.swift */; };
+		CEDEFCA92736B0E8008716F7 /* CategorySheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDEFCA72736B0E8008716F7 /* CategorySheetCell.xib */; };
+		CEDF0133273FFADF008F1467 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF0132273FFADF008F1467 /* CustomButton.swift */; };
+		CEE3B5FD274F032A0041FE66 /* ReviewsAoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE3B5FC274F032A0041FE66 /* ReviewsAoi.swift */; };
+		CEE3B602274F03540041FE66 /* ReviewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE3B601274F03540041FE66 /* ReviewsManager.swift */; };
+		CEF3BA142740055B00FEEAE4 /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF3BA132740055B00FEEAE4 /* CustomButton.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE58ABD8272610BF008690C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE58ABB9272610BD008690C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE58ABC0272610BD008690C1;
+			remoteInfo = "Chicken On Fire";
+		};
+		CE58ABE3272610BF008690C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE58ABB9272610BD008690C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE58ABC0272610BD008690C1;
+			remoteInfo = "Chicken On Fire";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3AD922CDE0447A63AA6CC6D9 /* Pods-Chicken On Fire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chicken On Fire.debug.xcconfig"; path = "Target Support Files/Pods-Chicken On Fire/Pods-Chicken On Fire.debug.xcconfig"; sourceTree = "<group>"; };
+		5BD64DCFDDF01D58CB0F79B9 /* Pods-Chicken On Fire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chicken On Fire.release.xcconfig"; path = "Target Support Files/Pods-Chicken On Fire/Pods-Chicken On Fire.release.xcconfig"; sourceTree = "<group>"; };
+		CE121C71273E98900093FD4B /* CustomizationCellSingle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationCellSingle.swift; sourceTree = "<group>"; };
+		CE121C72273E98900093FD4B /* CustomizationCellSingle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomizationCellSingle.xib; sourceTree = "<group>"; };
+		CE15B37C27428407001A4F58 /* BasketViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewCell.swift; sourceTree = "<group>"; };
+		CE15B37D27428407001A4F58 /* BasketViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketViewCell.xib; sourceTree = "<group>"; };
+		CE1847A4274A71BA007C93AE /* PhoneVerificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationManager.swift; sourceTree = "<group>"; };
+		CE1847A9274A79D9007C93AE /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
+		CE1847AE274A845F007C93AE /* PhoneVerificationApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationApi.swift; sourceTree = "<group>"; };
+		CE1847B4274BDFF8007C93AE /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		CE1847BD274BE3D3007C93AE /* SocialMediaButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialMediaButton.xib; sourceTree = "<group>"; };
+		CE1847C2274BE3E3007C93AE /* SocialMediaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaButton.swift; sourceTree = "<group>"; };
+		CE1847CA274BEFDF007C93AE /* SignInWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewController.swift; sourceTree = "<group>"; };
+		CE1847CF274BF0C9007C93AE /* UserAccountApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountApi.swift; sourceTree = "<group>"; };
+		CE1847D4274C02A7007C93AE /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		CE1847D9274C0A6C007C93AE /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		CE1BB8C52746B05C0030B9DB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		CE1BB8CA2746B7E60030B9DB /* SelectAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressViewController.swift; sourceTree = "<group>"; };
+		CE1BB8D02746B8F70030B9DB /* AddressTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableCell.swift; sourceTree = "<group>"; };
+		CE1BB8D12746B8F70030B9DB /* AddressTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressTableCell.xib; sourceTree = "<group>"; };
+		CE1FBED52743ED2800CE2DBD /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		CE1FBEDA2743FC2700CE2DBD /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
+		CE2938EC272C86980070F395 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CE2938F4272C870D0070F395 /* HomeHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderViewController.swift; sourceTree = "<group>"; };
+		CE2938F9272C876C0070F395 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		CE293900272C87F80070F395 /* MenuSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuSectionHeader.swift; sourceTree = "<group>"; };
+		CE293901272C87F80070F395 /* MenuItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemViewCell.swift; sourceTree = "<group>"; };
+		CE293902272C87F80070F395 /* MenuItemViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemViewCell.xib; sourceTree = "<group>"; };
+		CE293903272C87F80070F395 /* MenuSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuSectionHeader.xib; sourceTree = "<group>"; };
+		CE29390C272C883E0070F395 /* MenuTabBarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTabBarCell.xib; sourceTree = "<group>"; };
+		CE29390D272C883E0070F395 /* MenuTabBarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTabBarCell.swift; sourceTree = "<group>"; };
+		CE293913272C88700070F395 /* MenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
+		CE293927272C8B070070F395 /* MenuApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuApi.swift; sourceTree = "<group>"; };
+		CE324EA7273A9141001A4ABF /* CustomizationCellMultiple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationCellMultiple.swift; sourceTree = "<group>"; };
+		CE324EA8273A9141001A4ABF /* CustomizationCellMultiple.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomizationCellMultiple.xib; sourceTree = "<group>"; };
+		CE324EB1273A9157001A4ABF /* CustomizationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationSection.swift; sourceTree = "<group>"; };
+		CE324EB2273A9157001A4ABF /* CustomizationSection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomizationSection.xib; sourceTree = "<group>"; };
+		CE366F542747D5BE005169DC /* ScheduleOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleOrder.swift; sourceTree = "<group>"; };
+		CE366F5A2747DE54005169DC /* FinalOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalOrderCell.swift; sourceTree = "<group>"; };
+		CE366F5B2747DE54005169DC /* FinalOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinalOrderCell.xib; sourceTree = "<group>"; };
+		CE366F612747F26E005169DC /* OrderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManager.swift; sourceTree = "<group>"; };
+		CE366F6627480253005169DC /* ServiceChargeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceChargeApi.swift; sourceTree = "<group>"; };
+		CE366F6B27480900005169DC /* VoucherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherViewController.swift; sourceTree = "<group>"; };
+		CE366F7027480A56005169DC /* VoucherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherApi.swift; sourceTree = "<group>"; };
+		CE366F7527480A7C005169DC /* VoucherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherManager.swift; sourceTree = "<group>"; };
+		CE489E27274FEB6B002BEEC6 /* ReviewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCell.swift; sourceTree = "<group>"; };
+		CE489E28274FEB6B002BEEC6 /* ReviewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsCell.xib; sourceTree = "<group>"; };
+		CE489E2E274FF18E002BEEC6 /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
+		CE504A83274531930081F94D /* UserAddressManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddressManager.swift; sourceTree = "<group>"; };
+		CE504AA82745B58E0081F94D /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		CE58ABC1272610BD008690C1 /* Chicken On Fire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chicken On Fire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE58ABC4272610BD008690C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE58ABC6272610BD008690C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE58ABC8272610BD008690C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE58ABCB272610BD008690C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE58ABCD272610BF008690C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE58ABD0272610BF008690C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE58ABD2272610BF008690C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE58ABD7272610BF008690C1 /* Chicken On FireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chicken On FireTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE58ABDB272610BF008690C1 /* Chicken_On_FireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chicken_On_FireTests.swift; sourceTree = "<group>"; };
+		CE58ABDD272610BF008690C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE58ABE2272610BF008690C1 /* Chicken On FireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chicken On FireUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE58ABE6272610BF008690C1 /* Chicken_On_FireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chicken_On_FireUITests.swift; sourceTree = "<group>"; };
+		CE58ABE8272610BF008690C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE58AC24272617FA008690C1 /* GeneralAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAreaViewController.swift; sourceTree = "<group>"; };
+		CE58AC2927261947008690C1 /* GeneralInfoApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoApi.swift; sourceTree = "<group>"; };
+		CE58AC2E27261966008690C1 /* RestaurantInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantInfoManager.swift; sourceTree = "<group>"; };
+		CE58AC3827261A34008690C1 /* GeneralInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoManager.swift; sourceTree = "<group>"; };
+		CE58AC4F27261CE9008690C1 /* UserAccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountManager.swift; sourceTree = "<group>"; };
+		CE58D042274FCC8D00572444 /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
+		CE5A1C83274D1DB100C829A9 /* FavouritesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesApi.swift; sourceTree = "<group>"; };
+		CE5A1C88274D23D400C829A9 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		CE72805B27473999004663F6 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		CE75D07E2749305A004FAF26 /* OrderApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderApi.swift; sourceTree = "<group>"; };
+		CE75D08327494136004FAF26 /* BookeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookeyViewController.swift; sourceTree = "<group>"; };
+		CE75D088274944C0004FAF26 /* PaymentApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentApi.swift; sourceTree = "<group>"; };
+		CE912A272739386700639954 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		CE912A3927393C2600639954 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		CE912A3A27393C2600639954 /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
+		CE912A40273944A800639954 /* SideMenuSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuSectionCell.xib; sourceTree = "<group>"; };
+		CE912A45273944CC00639954 /* SideMenuSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuSectionCell.swift; sourceTree = "<group>"; };
+		CE912A532739788600639954 /* MenuSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSearchViewController.swift; sourceTree = "<group>"; };
+		CE912A582739816600639954 /* CustomizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeViewController.swift; sourceTree = "<group>"; };
+		CEAB0CA5274C760B005861D4 /* RestaurantInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantInfoViewController.swift; sourceTree = "<group>"; };
+		CEB1A01D2726CD580085A026 /* GeneralAreaMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAreaMapViewController.swift; sourceTree = "<group>"; };
+		CEB1A0222726F8470085A026 /* GeneralAreaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAreaManager.swift; sourceTree = "<group>"; };
+		CEB1A0272726FA6F0085A026 /* AllowedLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowedLocations.swift; sourceTree = "<group>"; };
+		CEB1A02C2726FCC40085A026 /* MyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExtensions.swift; sourceTree = "<group>"; };
+		CECA9D53274139D700604F6E /* BasketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketManager.swift; sourceTree = "<group>"; };
+		CECA9D58274150DF00604F6E /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		CEDEFCA02736A833008716F7 /* CatergorySheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatergorySheetViewController.swift; sourceTree = "<group>"; };
+		CEDEFCA62736B0E8008716F7 /* CategorySheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySheetCell.swift; sourceTree = "<group>"; };
+		CEDEFCA72736B0E8008716F7 /* CategorySheetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySheetCell.xib; sourceTree = "<group>"; };
+		CEDF0132273FFADF008F1467 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		CEE3B5FC274F032A0041FE66 /* ReviewsAoi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsAoi.swift; sourceTree = "<group>"; };
+		CEE3B601274F03540041FE66 /* ReviewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsManager.swift; sourceTree = "<group>"; };
+		CEF3BA132740055B00FEEAE4 /* CustomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButton.xib; sourceTree = "<group>"; };
+		F77529237B81AACA1C906BA4 /* Pods_Chicken_On_Fire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chicken_On_Fire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE58ABBE272610BD008690C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B2166C28E56B5FD14A58F82 /* Pods_Chicken_On_Fire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE58ABD4272610BF008690C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE58ABDF272610BF008690C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8720856B151F303712029C4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F77529237B81AACA1C906BA4 /* Pods_Chicken_On_Fire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE121C65273E82390093FD4B /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				CE1847BC274BE3A6007C93AE /* SocialMediaButton */,
+				CEDF0131273FFACE008F1467 /* CustomButton */,
+				CE1BB8C52746B05C0030B9DB /* CardView.swift */,
+				CE72805B27473999004663F6 /* ScheduleViewController.swift */,
+				CE366F6B27480900005169DC /* VoucherViewController.swift */,
+				CE1847A9274A79D9007C93AE /* PhoneVerificationViewController.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		CE15B37B27428387001A4F58 /* BasketTableView */ = {
+			isa = PBXGroup;
+			children = (
+				CE15B37C27428407001A4F58 /* BasketViewCell.swift */,
+				CE15B37D27428407001A4F58 /* BasketViewCell.xib */,
+			);
+			path = BasketTableView;
+			sourceTree = "<group>";
+		};
+		CE1847B3274BDFD5007C93AE /* AuthenticationViews */ = {
+			isa = PBXGroup;
+			children = (
+				CE1847B4274BDFF8007C93AE /* SignInViewController.swift */,
+				CE1847CA274BEFDF007C93AE /* SignInWithEmailViewController.swift */,
+				CE1847D4274C02A7007C93AE /* ForgetPasswordViewController.swift */,
+				CE1847D9274C0A6C007C93AE /* CreateAccountViewController.swift */,
+			);
+			path = AuthenticationViews;
+			sourceTree = "<group>";
+		};
+		CE1847BC274BE3A6007C93AE /* SocialMediaButton */ = {
+			isa = PBXGroup;
+			children = (
+				CE1847C2274BE3E3007C93AE /* SocialMediaButton.swift */,
+				CE1847BD274BE3D3007C93AE /* SocialMediaButton.xib */,
+			);
+			path = SocialMediaButton;
+			sourceTree = "<group>";
+		};
+		CE1BB8CF2746B8D00030B9DB /* AddressesTableView */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BB8D02746B8F70030B9DB /* AddressTableCell.swift */,
+				CE1BB8D12746B8F70030B9DB /* AddressTableCell.xib */,
+			);
+			path = AddressesTableView;
+			sourceTree = "<group>";
+		};
+		CE2938E2272C797D0070F395 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				CE489E1B274FE56B002BEEC6 /* ReviewsTableView */,
+				CE1847B3274BDFD5007C93AE /* AuthenticationViews */,
+				CE366F592747DE36005169DC /* FinalOrderTableView */,
+				CE1BB8CF2746B8D00030B9DB /* AddressesTableView */,
+				CE15B37B27428387001A4F58 /* BasketTableView */,
+				CE324EA6273A9115001A4ABF /* CustomizationTableView */,
+				CE912A262739384100639954 /* SideMenuView */,
+				CEDEFCA52736B096008716F7 /* CategorySheetView */,
+				CE2938FF272C87C80070F395 /* MenuTabBar */,
+				CE2938FE272C87A40070F395 /* MenuTableView */,
+				CE2938F4272C870D0070F395 /* HomeHeaderViewController.swift */,
+				CE75D08327494136004FAF26 /* BookeyViewController.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		CE2938FE272C87A40070F395 /* MenuTableView */ = {
+			isa = PBXGroup;
+			children = (
+				CE293901272C87F80070F395 /* MenuItemViewCell.swift */,
+				CE293902272C87F80070F395 /* MenuItemViewCell.xib */,
+				CE293900272C87F80070F395 /* MenuSectionHeader.swift */,
+				CE293903272C87F80070F395 /* MenuSectionHeader.xib */,
+			);
+			path = MenuTableView;
+			sourceTree = "<group>";
+		};
+		CE2938FF272C87C80070F395 /* MenuTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE2938F9272C876C0070F395 /* TabBarViewController.swift */,
+				CE29390D272C883E0070F395 /* MenuTabBarCell.swift */,
+				CE29390C272C883E0070F395 /* MenuTabBarCell.xib */,
+			);
+			path = MenuTabBar;
+			sourceTree = "<group>";
+		};
+		CE324EA6273A9115001A4ABF /* CustomizationTableView */ = {
+			isa = PBXGroup;
+			children = (
+				CE324EA7273A9141001A4ABF /* CustomizationCellMultiple.swift */,
+				CE324EA8273A9141001A4ABF /* CustomizationCellMultiple.xib */,
+				CE121C71273E98900093FD4B /* CustomizationCellSingle.swift */,
+				CE121C72273E98900093FD4B /* CustomizationCellSingle.xib */,
+				CE324EB1273A9157001A4ABF /* CustomizationSection.swift */,
+				CE324EB2273A9157001A4ABF /* CustomizationSection.xib */,
+			);
+			path = CustomizationTableView;
+			sourceTree = "<group>";
+		};
+		CE366F592747DE36005169DC /* FinalOrderTableView */ = {
+			isa = PBXGroup;
+			children = (
+				CE366F5A2747DE54005169DC /* FinalOrderCell.swift */,
+				CE366F5B2747DE54005169DC /* FinalOrderCell.xib */,
+			);
+			path = FinalOrderTableView;
+			sourceTree = "<group>";
+		};
+		CE489E1B274FE56B002BEEC6 /* ReviewsTableView */ = {
+			isa = PBXGroup;
+			children = (
+				CE489E27274FEB6B002BEEC6 /* ReviewsCell.swift */,
+				CE489E28274FEB6B002BEEC6 /* ReviewsCell.xib */,
+			);
+			path = ReviewsTableView;
+			sourceTree = "<group>";
+		};
+		CE58ABB8272610BD008690C1 = {
+			isa = PBXGroup;
+			children = (
+				CE58ABC3272610BD008690C1 /* Chicken On Fire */,
+				CE58ABDA272610BF008690C1 /* Chicken On FireTests */,
+				CE58ABE5272610BF008690C1 /* Chicken On FireUITests */,
+				CE58ABC2272610BD008690C1 /* Products */,
+				D370E31184645E2B4A0771B2 /* Pods */,
+				8720856B151F303712029C4A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE58ABC2272610BD008690C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE58ABC1272610BD008690C1 /* Chicken On Fire.app */,
+				CE58ABD7272610BF008690C1 /* Chicken On FireTests.xctest */,
+				CE58ABE2272610BF008690C1 /* Chicken On FireUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE58ABC3272610BD008690C1 /* Chicken On Fire */ = {
+			isa = PBXGroup;
+			children = (
+				CE58AC2E27261966008690C1 /* RestaurantInfoManager.swift */,
+				CEB1A02C2726FCC40085A026 /* MyExtensions.swift */,
+				CE58ABC4272610BD008690C1 /* AppDelegate.swift */,
+				CE58ABC6272610BD008690C1 /* SceneDelegate.swift */,
+				CE121C65273E82390093FD4B /* Widgets */,
+				CE2938E2272C797D0070F395 /* SubViews */,
+				CE58ABF7272610E1008690C1 /* APIs */,
+				CE58AC3727261A1B008690C1 /* Helpers */,
+				CE58AC3327261970008690C1 /* ViewControllers */,
+				CE58ABCA272610BD008690C1 /* Main.storyboard */,
+				CE58ABCD272610BF008690C1 /* Assets.xcassets */,
+				CE58ABCF272610BF008690C1 /* LaunchScreen.storyboard */,
+				CE58ABD2272610BF008690C1 /* Info.plist */,
+			);
+			path = "Chicken On Fire";
+			sourceTree = "<group>";
+		};
+		CE58ABDA272610BF008690C1 /* Chicken On FireTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE58ABDB272610BF008690C1 /* Chicken_On_FireTests.swift */,
+				CE58ABDD272610BF008690C1 /* Info.plist */,
+			);
+			path = "Chicken On FireTests";
+			sourceTree = "<group>";
+		};
+		CE58ABE5272610BF008690C1 /* Chicken On FireUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE58ABE6272610BF008690C1 /* Chicken_On_FireUITests.swift */,
+				CE58ABE8272610BF008690C1 /* Info.plist */,
+			);
+			path = "Chicken On FireUITests";
+			sourceTree = "<group>";
+		};
+		CE58ABF7272610E1008690C1 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				CE58AC2927261947008690C1 /* GeneralInfoApi.swift */,
+				CEB1A0272726FA6F0085A026 /* AllowedLocations.swift */,
+				CE293927272C8B070070F395 /* MenuApi.swift */,
+				CE366F542747D5BE005169DC /* ScheduleOrder.swift */,
+				CE366F6627480253005169DC /* ServiceChargeApi.swift */,
+				CE366F7027480A56005169DC /* VoucherApi.swift */,
+				CE75D07E2749305A004FAF26 /* OrderApi.swift */,
+				CE75D088274944C0004FAF26 /* PaymentApi.swift */,
+				CE1847AE274A845F007C93AE /* PhoneVerificationApi.swift */,
+				CE1847CF274BF0C9007C93AE /* UserAccountApi.swift */,
+				CE5A1C83274D1DB100C829A9 /* FavouritesApi.swift */,
+				CEE3B5FC274F032A0041FE66 /* ReviewsAoi.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		CE58AC3327261970008690C1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE58ABC8272610BD008690C1 /* ViewController.swift */,
+				CE58AC24272617FA008690C1 /* GeneralAreaViewController.swift */,
+				CEB1A01D2726CD580085A026 /* GeneralAreaMapViewController.swift */,
+				CE2938EC272C86980070F395 /* HomeViewController.swift */,
+				CE912A532739788600639954 /* MenuSearchViewController.swift */,
+				CE912A582739816600639954 /* CustomizeViewController.swift */,
+				CECA9D58274150DF00604F6E /* BasketViewController.swift */,
+				CE1FBED52743ED2800CE2DBD /* AddLocationViewController.swift */,
+				CE1FBEDA2743FC2700CE2DBD /* AddAddressViewController.swift */,
+				CE504AA82745B58E0081F94D /* CheckoutViewController.swift */,
+				CE1BB8CA2746B7E60030B9DB /* SelectAddressViewController.swift */,
+				CEAB0CA5274C760B005861D4 /* RestaurantInfoViewController.swift */,
+				CE5A1C88274D23D400C829A9 /* FavouritesViewController.swift */,
+				CE58D042274FCC8D00572444 /* ReviewsViewController.swift */,
+				CE489E2E274FF18E002BEEC6 /* AddReviewViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CE58AC3727261A1B008690C1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CE58AC3827261A34008690C1 /* GeneralInfoManager.swift */,
+				CE58AC4F27261CE9008690C1 /* UserAccountManager.swift */,
+				CEB1A0222726F8470085A026 /* GeneralAreaManager.swift */,
+				CE293913272C88700070F395 /* MenuManager.swift */,
+				CECA9D53274139D700604F6E /* BasketManager.swift */,
+				CE504A83274531930081F94D /* UserAddressManager.swift */,
+				CE366F612747F26E005169DC /* OrderManager.swift */,
+				CE366F7527480A7C005169DC /* VoucherManager.swift */,
+				CE1847A4274A71BA007C93AE /* PhoneVerificationManager.swift */,
+				CEE3B601274F03540041FE66 /* ReviewsManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CE912A262739384100639954 /* SideMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				CE912A272739386700639954 /* SideMenuViewController.swift */,
+				CE912A3927393C2600639954 /* SideMenuCell.swift */,
+				CE912A3A27393C2600639954 /* SideMenuCell.xib */,
+				CE912A45273944CC00639954 /* SideMenuSectionCell.swift */,
+				CE912A40273944A800639954 /* SideMenuSectionCell.xib */,
+			);
+			path = SideMenuView;
+			sourceTree = "<group>";
+		};
+		CEDEFCA52736B096008716F7 /* CategorySheetView */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEFCA02736A833008716F7 /* CatergorySheetViewController.swift */,
+				CEDEFCA62736B0E8008716F7 /* CategorySheetCell.swift */,
+				CEDEFCA72736B0E8008716F7 /* CategorySheetCell.xib */,
+			);
+			path = CategorySheetView;
+			sourceTree = "<group>";
+		};
+		CEDF0131273FFACE008F1467 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				CEDF0132273FFADF008F1467 /* CustomButton.swift */,
+				CEF3BA132740055B00FEEAE4 /* CustomButton.xib */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		D370E31184645E2B4A0771B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AD922CDE0447A63AA6CC6D9 /* Pods-Chicken On Fire.debug.xcconfig */,
+				5BD64DCFDDF01D58CB0F79B9 /* Pods-Chicken On Fire.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE58ABC0272610BD008690C1 /* Chicken On Fire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE58ABEB272610BF008690C1 /* Build configuration list for PBXNativeTarget "Chicken On Fire" */;
+			buildPhases = (
+				0798944974D84C014E316292 /* [CP] Check Pods Manifest.lock */,
+				CE58ABBD272610BD008690C1 /* Sources */,
+				CE58ABBE272610BD008690C1 /* Frameworks */,
+				CE58ABBF272610BD008690C1 /* Resources */,
+				ED02FD044E6262C00AC2EA3F /* [CP] Embed Pods Frameworks */,
+				CC0E960D618709A63BABE269 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chicken On Fire";
+			productName = "Chicken On Fire";
+			productReference = CE58ABC1272610BD008690C1 /* Chicken On Fire.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE58ABD6272610BF008690C1 /* Chicken On FireTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE58ABEE272610BF008690C1 /* Build configuration list for PBXNativeTarget "Chicken On FireTests" */;
+			buildPhases = (
+				CE58ABD3272610BF008690C1 /* Sources */,
+				CE58ABD4272610BF008690C1 /* Frameworks */,
+				CE58ABD5272610BF008690C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE58ABD9272610BF008690C1 /* PBXTargetDependency */,
+			);
+			name = "Chicken On FireTests";
+			productName = "Chicken On FireTests";
+			productReference = CE58ABD7272610BF008690C1 /* Chicken On FireTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE58ABE1272610BF008690C1 /* Chicken On FireUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE58ABF1272610BF008690C1 /* Build configuration list for PBXNativeTarget "Chicken On FireUITests" */;
+			buildPhases = (
+				CE58ABDE272610BF008690C1 /* Sources */,
+				CE58ABDF272610BF008690C1 /* Frameworks */,
+				CE58ABE0272610BF008690C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE58ABE4272610BF008690C1 /* PBXTargetDependency */,
+			);
+			name = "Chicken On FireUITests";
+			productName = "Chicken On FireUITests";
+			productReference = CE58ABE2272610BF008690C1 /* Chicken On FireUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE58ABB9272610BD008690C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					CE58ABC0272610BD008690C1 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					CE58ABD6272610BF008690C1 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = CE58ABC0272610BD008690C1;
+					};
+					CE58ABE1272610BF008690C1 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = CE58ABC0272610BD008690C1;
+					};
+				};
+			};
+			buildConfigurationList = CE58ABBC272610BD008690C1 /* Build configuration list for PBXProject "Chicken On Fire" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE58ABB8272610BD008690C1;
+			productRefGroup = CE58ABC2272610BD008690C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE58ABC0272610BD008690C1 /* Chicken On Fire */,
+				CE58ABD6272610BF008690C1 /* Chicken On FireTests */,
+				CE58ABE1272610BF008690C1 /* Chicken On FireUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE58ABBF272610BD008690C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE1BB8D32746B8F70030B9DB /* AddressTableCell.xib in Resources */,
+				CE293906272C87F80070F395 /* MenuItemViewCell.xib in Resources */,
+				CE58ABD1272610BF008690C1 /* LaunchScreen.storyboard in Resources */,
+				CE29390E272C883E0070F395 /* MenuTabBarCell.xib in Resources */,
+				CE912A3C27393C2600639954 /* SideMenuCell.xib in Resources */,
+				CE15B37F27428407001A4F58 /* BasketViewCell.xib in Resources */,
+				CEF3BA142740055B00FEEAE4 /* CustomButton.xib in Resources */,
+				CE58ABCE272610BF008690C1 /* Assets.xcassets in Resources */,
+				CE324EAA273A9141001A4ABF /* CustomizationCellMultiple.xib in Resources */,
+				CE366F5D2747DE54005169DC /* FinalOrderCell.xib in Resources */,
+				CEDEFCA92736B0E8008716F7 /* CategorySheetCell.xib in Resources */,
+				CE121C74273E98900093FD4B /* CustomizationCellSingle.xib in Resources */,
+				CE293907272C87F80070F395 /* MenuSectionHeader.xib in Resources */,
+				CE912A41273944A800639954 /* SideMenuSectionCell.xib in Resources */,
+				CE324EB4273A9157001A4ABF /* CustomizationSection.xib in Resources */,
+				CE58ABCC272610BD008690C1 /* Main.storyboard in Resources */,
+				CE1847BE274BE3D3007C93AE /* SocialMediaButton.xib in Resources */,
+				CE489E2A274FEB6B002BEEC6 /* ReviewsCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE58ABD5272610BF008690C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE58ABE0272610BF008690C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0798944974D84C014E316292 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chicken On Fire-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC0E960D618709A63BABE269 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chicken On Fire/Pods-Chicken On Fire-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chicken On Fire/Pods-Chicken On Fire-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chicken On Fire/Pods-Chicken On Fire-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED02FD044E6262C00AC2EA3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chicken On Fire/Pods-Chicken On Fire-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chicken On Fire/Pods-Chicken On Fire-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chicken On Fire/Pods-Chicken On Fire-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE58ABBD272610BD008690C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE58AC2F27261966008690C1 /* RestaurantInfoManager.swift in Sources */,
+				CE489E29274FEB6B002BEEC6 /* ReviewsCell.swift in Sources */,
+				CE366F5C2747DE54005169DC /* FinalOrderCell.swift in Sources */,
+				CE324EB3273A9157001A4ABF /* CustomizationSection.swift in Sources */,
+				CE912A542739788600639954 /* MenuSearchViewController.swift in Sources */,
+				CE1BB8CB2746B7E60030B9DB /* SelectAddressViewController.swift in Sources */,
+				CE366F6C27480900005169DC /* VoucherViewController.swift in Sources */,
+				CECA9D54274139D700604F6E /* BasketManager.swift in Sources */,
+				CE58AC3927261A34008690C1 /* GeneralInfoManager.swift in Sources */,
+				CE58AC5027261CE9008690C1 /* UserAccountManager.swift in Sources */,
+				CEB1A02D2726FCC40085A026 /* MyExtensions.swift in Sources */,
+				CE366F7627480A7C005169DC /* VoucherManager.swift in Sources */,
+				CE75D089274944C0004FAF26 /* PaymentApi.swift in Sources */,
+				CE1BB8C62746B05C0030B9DB /* CardView.swift in Sources */,
+				CE293914272C88700070F395 /* MenuManager.swift in Sources */,
+				CE121C73273E98900093FD4B /* CustomizationCellSingle.swift in Sources */,
+				CE58AC25272617FA008690C1 /* GeneralAreaViewController.swift in Sources */,
+				CE1847A5274A71BA007C93AE /* PhoneVerificationManager.swift in Sources */,
+				CEE3B5FD274F032A0041FE66 /* ReviewsAoi.swift in Sources */,
+				CE293904272C87F80070F395 /* MenuSectionHeader.swift in Sources */,
+				CE366F6727480253005169DC /* ServiceChargeApi.swift in Sources */,
+				CE1FBEDB2743FC2700CE2DBD /* AddAddressViewController.swift in Sources */,
+				CE366F7127480A56005169DC /* VoucherApi.swift in Sources */,
+				CE293928272C8B070070F395 /* MenuApi.swift in Sources */,
+				CE1847D5274C02A7007C93AE /* ForgetPasswordViewController.swift in Sources */,
+				CE5A1C84274D1DB100C829A9 /* FavouritesApi.swift in Sources */,
+				CEE3B602274F03540041FE66 /* ReviewsManager.swift in Sources */,
+				CE58ABC9272610BD008690C1 /* ViewController.swift in Sources */,
+				CE75D08427494136004FAF26 /* BookeyViewController.swift in Sources */,
+				CE504AA92745B58E0081F94D /* CheckoutViewController.swift in Sources */,
+				CE293905272C87F80070F395 /* MenuItemViewCell.swift in Sources */,
+				CE58ABC5272610BD008690C1 /* AppDelegate.swift in Sources */,
+				CE58AC2A27261947008690C1 /* GeneralInfoApi.swift in Sources */,
+				CE1847B5274BDFF8007C93AE /* SignInViewController.swift in Sources */,
+				CE912A46273944CC00639954 /* SideMenuSectionCell.swift in Sources */,
+				CE5A1C89274D23D400C829A9 /* FavouritesViewController.swift in Sources */,
+				CE912A592739816600639954 /* CustomizeViewController.swift in Sources */,
+				CE1847C3274BE3E3007C93AE /* SocialMediaButton.swift in Sources */,
+				CE1BB8D22746B8F70030B9DB /* AddressTableCell.swift in Sources */,
+				CE366F622747F26E005169DC /* OrderManager.swift in Sources */,
+				CECA9D59274150DF00604F6E /* BasketViewController.swift in Sources */,
+				CEDF0133273FFADF008F1467 /* CustomButton.swift in Sources */,
+				CE324EA9273A9141001A4ABF /* CustomizationCellMultiple.swift in Sources */,
+				CE58ABC7272610BD008690C1 /* SceneDelegate.swift in Sources */,
+				CE75D07F2749305A004FAF26 /* OrderApi.swift in Sources */,
+				CE1847D0274BF0C9007C93AE /* UserAccountApi.swift in Sources */,
+				CE504A84274531930081F94D /* UserAddressManager.swift in Sources */,
+				CEB1A01E2726CD580085A026 /* GeneralAreaMapViewController.swift in Sources */,
+				CE29390F272C883E0070F395 /* MenuTabBarCell.swift in Sources */,
+				CE15B37E27428407001A4F58 /* BasketViewCell.swift in Sources */,
+				CEDEFCA82736B0E8008716F7 /* CategorySheetCell.swift in Sources */,
+				CE2938F5272C870D0070F395 /* HomeHeaderViewController.swift in Sources */,
+				CE58D043274FCC8D00572444 /* ReviewsViewController.swift in Sources */,
+				CE1847DA274C0A6C007C93AE /* CreateAccountViewController.swift in Sources */,
+				CE72805C27473999004663F6 /* ScheduleViewController.swift in Sources */,
+				CE1847AF274A845F007C93AE /* PhoneVerificationApi.swift in Sources */,
+				CEB1A0282726FA6F0085A026 /* AllowedLocations.swift in Sources */,
+				CE1FBED62743ED2800CE2DBD /* AddLocationViewController.swift in Sources */,
+				CE1847CB274BEFDF007C93AE /* SignInWithEmailViewController.swift in Sources */,
+				CE1847AA274A79D9007C93AE /* PhoneVerificationViewController.swift in Sources */,
+				CE2938ED272C86980070F395 /* HomeViewController.swift in Sources */,
+				CE912A282739386700639954 /* SideMenuViewController.swift in Sources */,
+				CEDEFCA12736A833008716F7 /* CatergorySheetViewController.swift in Sources */,
+				CE489E2F274FF18E002BEEC6 /* AddReviewViewController.swift in Sources */,
+				CE2938FA272C876C0070F395 /* TabBarViewController.swift in Sources */,
+				CE366F552747D5BE005169DC /* ScheduleOrder.swift in Sources */,
+				CEAB0CA6274C760B005861D4 /* RestaurantInfoViewController.swift in Sources */,
+				CEB1A0232726F8470085A026 /* GeneralAreaManager.swift in Sources */,
+				CE912A3B27393C2600639954 /* SideMenuCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE58ABD3272610BF008690C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE58ABDC272610BF008690C1 /* Chicken_On_FireTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE58ABDE272610BF008690C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE58ABE7272610BF008690C1 /* Chicken_On_FireUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE58ABD9272610BF008690C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE58ABC0272610BD008690C1 /* Chicken On Fire */;
+			targetProxy = CE58ABD8272610BF008690C1 /* PBXContainerItemProxy */;
+		};
+		CE58ABE4272610BF008690C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE58ABC0272610BD008690C1 /* Chicken On Fire */;
+			targetProxy = CE58ABE3272610BF008690C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE58ABCA272610BD008690C1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE58ABCB272610BD008690C1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE58ABCF272610BF008690C1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE58ABD0272610BF008690C1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE58ABE9272610BF008690C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE58ABEA272610BF008690C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE58ABEC272610BF008690C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AD922CDE0447A63AA6CC6D9 /* Pods-Chicken On Fire.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JU233V8D87;
+				INFOPLIST_FILE = "Chicken On Fire/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rabihandari.Chicken-On-Fire";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE58ABED272610BF008690C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BD64DCFDDF01D58CB0F79B9 /* Pods-Chicken On Fire.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JU233V8D87;
+				INFOPLIST_FILE = "Chicken On Fire/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rabihandari.Chicken-On-Fire";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE58ABEF272610BF008690C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JU233V8D87;
+				INFOPLIST_FILE = "Chicken On FireTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rabihandari.Chicken-On-FireTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chicken On Fire.app/Chicken On Fire";
+			};
+			name = Debug;
+		};
+		CE58ABF0272610BF008690C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JU233V8D87;
+				INFOPLIST_FILE = "Chicken On FireTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rabihandari.Chicken-On-FireTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chicken On Fire.app/Chicken On Fire";
+			};
+			name = Release;
+		};
+		CE58ABF2272610BF008690C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JU233V8D87;
+				INFOPLIST_FILE = "Chicken On FireUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rabihandari.Chicken-On-FireUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Chicken On Fire";
+			};
+			name = Debug;
+		};
+		CE58ABF3272610BF008690C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JU233V8D87;
+				INFOPLIST_FILE = "Chicken On FireUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rabihandari.Chicken-On-FireUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Chicken On Fire";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE58ABBC272610BD008690C1 /* Build configuration list for PBXProject "Chicken On Fire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE58ABE9272610BF008690C1 /* Debug */,
+				CE58ABEA272610BF008690C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE58ABEB272610BF008690C1 /* Build configuration list for PBXNativeTarget "Chicken On Fire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE58ABEC272610BF008690C1 /* Debug */,
+				CE58ABED272610BF008690C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE58ABEE272610BF008690C1 /* Build configuration list for PBXNativeTarget "Chicken On FireTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE58ABEF272610BF008690C1 /* Debug */,
+				CE58ABF0272610BF008690C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE58ABF1272610BF008690C1 /* Build configuration list for PBXNativeTarget "Chicken On FireUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE58ABF2272610BF008690C1 /* Debug */,
+				CE58ABF3272610BF008690C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE58ABB9272610BD008690C1 /* Project object */;
+}
