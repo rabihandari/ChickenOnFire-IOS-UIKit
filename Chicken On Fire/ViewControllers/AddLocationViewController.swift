@@ -14,10 +14,13 @@ class AddLocationViewController: UIViewController {
     
     @IBOutlet var mapView: GMSMapView!
     @IBOutlet weak var confirmButton: CustomButton!
+    @IBOutlet weak var myLocationView: CardView!
     
     let zoom: Float = 15
+    let locationManager = CLLocationManager()
 
     var polyline: GMSPolyline?
+    var currentLocation: CLLocationCoordinate2D?
     var selectedCoordinates = GeneralAreaManager.getSavedArea().getCoordinates()
     
     var address: Address?
@@ -26,6 +29,17 @@ class AddLocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Current device location...
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        myLocationView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(currentLocation(_:))))
+        
+        // Setting UI
         if let address = address {
             selectedCoordinates = address.getCoordinates()
         }
@@ -91,6 +105,15 @@ class AddLocationViewController: UIViewController {
         }
     }
 
+    
+    
+    @objc func currentLocation(_ sender: Any) {
+        guard let currentLocation = currentLocation else {
+            return
+        }
+        mapView.animate(to: GMSCameraPosition(target: currentLocation, zoom: zoom))
+        selectedCoordinates = currentLocation
+    }
 }
 
 
@@ -128,4 +151,11 @@ extension AddLocationViewController: GMSAutocompleteViewControllerDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension AddLocationViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        self.currentLocation = locValue
+    }
 }

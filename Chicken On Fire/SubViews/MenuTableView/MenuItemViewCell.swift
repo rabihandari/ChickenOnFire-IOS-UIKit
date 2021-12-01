@@ -22,6 +22,8 @@ class MenuItemViewCell: UITableViewCell {
     @IBOutlet var discountLine: UIView!
     @IBOutlet var newPrice: UILabel!
     
+    let language = LanguageManager.language
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,16 +38,21 @@ class MenuItemViewCell: UITableViewCell {
     
     
     func configure(with menuItem: MenuItem) {
-        title.text = menuItem.name
-        desc.text = menuItem.desicription
+        title.text = language == "en" ? menuItem.name : menuItem.nameAr
+        desc.text = language == "en" ? menuItem.desicription : menuItem.desicriptionAr
         price.text = "K.D \(String(format: "%.3f",menuItem.price))"
         let urlString = RestaurantInfoManager.backendURL + menuItem.image
-        itemImage.sd_setImage(with: URL(string: urlString))
+        
+        if !menuItem.image.isEmpty {
+            itemImage.sd_setImage(with: URL(string: urlString))
+        } else {
+            itemImage.image = UIImage(named: "default-item-img")
+        }
         
         if menuItem.discount > 0 {
             discountLine.isHidden = false
             newPrice.isHidden = false
-            newPrice.text = "K.D \(String(format: "%.3f", (menuItem.price - (menuItem.price * menuItem.discount/100))))"
+            newPrice.text = "K.D".localized() + " \(String(format: "%.3f", (menuItem.price - (menuItem.price * menuItem.discount/100))))"
             price.textColor = .darkGray
         } else {
             discountLine.isHidden = true

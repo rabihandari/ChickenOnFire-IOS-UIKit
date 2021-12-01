@@ -110,30 +110,32 @@ class CheckoutViewController: UIViewController {
         if segue.identifier == "ScheduleSegue" {
             let vc = segue.destination as! ScheduleViewController
             vc.selectedDate = schedule
-            vc.onSchedulePicked = { date in
+            vc.onSchedulePicked = { stringDate in
                 self.scheduleLoading = true
-                ScheduleOrder.checkIfValid(branchId: GeneralAreaManager.getSavedArea().branchID, schedule: date, onSuccess: { valid in
+                ScheduleOrder.checkIfValid(branchId: GeneralAreaManager.getSavedArea().branchID, date: stringDate, onSuccess: { valid in
                     
                     DispatchQueue.main.async {
                         if valid {
-                            let formatter = DateFormatter()
-                            formatter.dateFormat = "Y-MM-dd HH:MM:SS"
-                            let stringDate = formatter.string(from: date)
                             self.scheduleLabel.text = stringDate
                             self.scheduleLabel.textColor = .gray
                         } else {
-                            self.scheduleLabel.text = "Sorry, we will not be availalbe at this time"
+                            self.scheduleLabel.text = "Sorry, we will not be availalbe at this time".localized()
                             self.scheduleLabel.textColor = .red
                         }
+                        
+                        let formatter = DateFormatter()
+                        formatter.dateFormat = "Y-MM-dd HH:MM:SS"
+                        let date = formatter.date(from: stringDate)
+                        
                         self.scheduleValid = valid
                         self.schedule = date
                         self.scheduleLabel.isHidden = false
-                        
                         self.scheduleLoading = false
                     }
                     
                 }, onFailure: { error in
                     DispatchQueue.main.async {
+                        print("Something went wrong")
                         print(error)
                         self.scheduleLoading = false
                         self.scheduleLabel.isHidden = true

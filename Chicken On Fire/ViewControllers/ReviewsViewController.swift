@@ -88,11 +88,13 @@ class ReviewsViewController: UIViewController {
             destination.guestEnabled = false
             destination.onSuccess = { userAccount in
                 UserAccountManager.setUserAccount(account: userAccount)
-                self.addReview(self)
+                
+                let vc = self.storyboard?.instantiateViewController(identifier: "AddReviewStoryboard") as! AddReviewViewController
+                self.navigationController?.pushViewController(vc, animated: true)
             }
             self.navigationController?.pushViewController(destination, animated: true)
         } else {
-            let vc = storyboard?.instantiateViewController(identifier: "AddReviewStoryboard") as! AddAddressViewController
+            let vc = storyboard?.instantiateViewController(identifier: "AddReviewStoryboard") as! AddReviewViewController
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

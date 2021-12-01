@@ -3,6 +3,11 @@
 <plist version="1.0">
 <dict>
     
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Your location is required for finding the best branch for you</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Your location is required for finding the best branch for you</string>
+    
     <key>LSApplicationQueriesSchemes</key>
     <array>
         <string>twitter</string>

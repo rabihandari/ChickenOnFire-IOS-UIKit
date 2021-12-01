@@ -14,7 +14,7 @@ import UIKit
     
     @IBInspectable var middleTitle: String? {
         didSet {
-            middleLabel.text = middleTitle
+            middleLabel.text = middleTitle?.localized()
         }
     }
     

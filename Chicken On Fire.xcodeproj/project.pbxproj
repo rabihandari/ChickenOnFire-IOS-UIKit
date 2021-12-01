@@ -11,7 +11,6 @@
 		CE121C73273E98900093FD4B /* CustomizationCellSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE121C71273E98900093FD4B /* CustomizationCellSingle.swift */; };
 		CE121C74273E98900093FD4B /* CustomizationCellSingle.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE121C72273E98900093FD4B /* CustomizationCellSingle.xib */; };
 		CE15B37E27428407001A4F58 /* BasketViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE15B37C27428407001A4F58 /* BasketViewCell.swift */; };
-		CE15B37F27428407001A4F58 /* BasketViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE15B37D27428407001A4F58 /* BasketViewCell.xib */; };
 		CE1847A5274A71BA007C93AE /* PhoneVerificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1847A4274A71BA007C93AE /* PhoneVerificationManager.swift */; };
 		CE1847AA274A79D9007C93AE /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1847A9274A79D9007C93AE /* PhoneVerificationViewController.swift */; };
 		CE1847AF274A845F007C93AE /* PhoneVerificationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1847AE274A845F007C93AE /* PhoneVerificationApi.swift */; };
@@ -29,7 +28,6 @@
 		CE1FBED62743ED2800CE2DBD /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FBED52743ED2800CE2DBD /* AddLocationViewController.swift */; };
 		CE1FBEDB2743FC2700CE2DBD /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FBEDA2743FC2700CE2DBD /* AddAddressViewController.swift */; };
 		CE2938ED272C86980070F395 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2938EC272C86980070F395 /* HomeViewController.swift */; };
-		CE2938F5272C870D0070F395 /* HomeHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2938F4272C870D0070F395 /* HomeHeaderViewController.swift */; };
 		CE2938FA272C876C0070F395 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2938F9272C876C0070F395 /* TabBarViewController.swift */; };
 		CE293904272C87F80070F395 /* MenuSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE293900272C87F80070F395 /* MenuSectionHeader.swift */; };
 		CE293905272C87F80070F395 /* MenuItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE293901272C87F80070F395 /* MenuItemViewCell.swift */; };
@@ -54,6 +52,9 @@
 		CE489E29274FEB6B002BEEC6 /* ReviewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE489E27274FEB6B002BEEC6 /* ReviewsCell.swift */; };
 		CE489E2A274FEB6B002BEEC6 /* ReviewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE489E28274FEB6B002BEEC6 /* ReviewsCell.xib */; };
 		CE489E2F274FF18E002BEEC6 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE489E2E274FF18E002BEEC6 /* AddReviewViewController.swift */; };
+		CE4E1CEE275270CC00B03F57 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE4E1CF0275270CC00B03F57 /* Localizable.strings */; };
+		CE4E1CF92752869700B03F57 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E1CF82752869700B03F57 /* LanguageManager.swift */; };
+		CE4E1CFE275289B200B03F57 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E1CFD275289B200B03F57 /* LanguageViewController.swift */; };
 		CE504A84274531930081F94D /* UserAddressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE504A83274531930081F94D /* UserAddressManager.swift */; };
 		CE504AA92745B58E0081F94D /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE504AA82745B58E0081F94D /* CheckoutViewController.swift */; };
 		CE58ABC5272610BD008690C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58ABC4272610BD008690C1 /* AppDelegate.swift */; };
@@ -83,6 +84,7 @@
 		CE912A46273944CC00639954 /* SideMenuSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE912A45273944CC00639954 /* SideMenuSectionCell.swift */; };
 		CE912A542739788600639954 /* MenuSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE912A532739788600639954 /* MenuSearchViewController.swift */; };
 		CE912A592739816600639954 /* CustomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE912A582739816600639954 /* CustomizeViewController.swift */; };
+		CE93DCA72753C0B400CC148E /* BasketViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE93DCA92753C0B400CC148E /* BasketViewCell.xib */; };
 		CEAB0CA6274C760B005861D4 /* RestaurantInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB0CA5274C760B005861D4 /* RestaurantInfoViewController.swift */; };
 		CEB1A01E2726CD580085A026 /* GeneralAreaMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1A01D2726CD580085A026 /* GeneralAreaMapViewController.swift */; };
 		CEB1A0232726F8470085A026 /* GeneralAreaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1A0222726F8470085A026 /* GeneralAreaManager.swift */; };
@@ -122,7 +124,6 @@
 		CE121C71273E98900093FD4B /* CustomizationCellSingle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationCellSingle.swift; sourceTree = "<group>"; };
 		CE121C72273E98900093FD4B /* CustomizationCellSingle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomizationCellSingle.xib; sourceTree = "<group>"; };
 		CE15B37C27428407001A4F58 /* BasketViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewCell.swift; sourceTree = "<group>"; };
-		CE15B37D27428407001A4F58 /* BasketViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketViewCell.xib; sourceTree = "<group>"; };
 		CE1847A4274A71BA007C93AE /* PhoneVerificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationManager.swift; sourceTree = "<group>"; };
 		CE1847A9274A79D9007C93AE /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
 		CE1847AE274A845F007C93AE /* PhoneVerificationApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationApi.swift; sourceTree = "<group>"; };
@@ -140,7 +141,6 @@
 		CE1FBED52743ED2800CE2DBD /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		CE1FBEDA2743FC2700CE2DBD /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
 		CE2938EC272C86980070F395 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		CE2938F4272C870D0070F395 /* HomeHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderViewController.swift; sourceTree = "<group>"; };
 		CE2938F9272C876C0070F395 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		CE293900272C87F80070F395 /* MenuSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuSectionHeader.swift; sourceTree = "<group>"; };
 		CE293901272C87F80070F395 /* MenuItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemViewCell.swift; sourceTree = "<group>"; };
@@ -165,6 +165,11 @@
 		CE489E27274FEB6B002BEEC6 /* ReviewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCell.swift; sourceTree = "<group>"; };
 		CE489E28274FEB6B002BEEC6 /* ReviewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsCell.xib; sourceTree = "<group>"; };
 		CE489E2E274FF18E002BEEC6 /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
+		CE4E1CE52752707700B03F57 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		CE4E1CEF275270CC00B03F57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE4E1CF4275270D100B03F57 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE4E1CF82752869700B03F57 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		CE4E1CFD275289B200B03F57 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		CE504A83274531930081F94D /* UserAddressManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddressManager.swift; sourceTree = "<group>"; };
 		CE504AA82745B58E0081F94D /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		CE58ABC1272610BD008690C1 /* Chicken On Fire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chicken On Fire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +205,8 @@
 		CE912A45273944CC00639954 /* SideMenuSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuSectionCell.swift; sourceTree = "<group>"; };
 		CE912A532739788600639954 /* MenuSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSearchViewController.swift; sourceTree = "<group>"; };
 		CE912A582739816600639954 /* CustomizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeViewController.swift; sourceTree = "<group>"; };
+		CE93DCA82753C0B400CC148E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BasketViewCell.xib; sourceTree = "<group>"; };
+		CE93DCAE2753C0BE00CC148E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/BasketViewCell.strings; sourceTree = "<group>"; };
 		CEAB0CA5274C760B005861D4 /* RestaurantInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantInfoViewController.swift; sourceTree = "<group>"; };
 		CEB1A01D2726CD580085A026 /* GeneralAreaMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAreaMapViewController.swift; sourceTree = "<group>"; };
 		CEB1A0222726F8470085A026 /* GeneralAreaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAreaManager.swift; sourceTree = "<group>"; };
@@ -260,6 +267,7 @@
 				CE72805B27473999004663F6 /* ScheduleViewController.swift */,
 				CE366F6B27480900005169DC /* VoucherViewController.swift */,
 				CE1847A9274A79D9007C93AE /* PhoneVerificationViewController.swift */,
+				CE4E1CFD275289B200B03F57 /* LanguageViewController.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -268,7 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				CE15B37C27428407001A4F58 /* BasketViewCell.swift */,
-				CE15B37D27428407001A4F58 /* BasketViewCell.xib */,
+				CE93DCA92753C0B400CC148E /* BasketViewCell.xib */,
 			);
 			path = BasketTableView;
 			sourceTree = "<group>";
@@ -315,7 +323,6 @@
 				CEDEFCA52736B096008716F7 /* CategorySheetView */,
 				CE2938FF272C87C80070F395 /* MenuTabBar */,
 				CE2938FE272C87A40070F395 /* MenuTableView */,
-				CE2938F4272C870D0070F395 /* HomeHeaderViewController.swift */,
 				CE75D08327494136004FAF26 /* BookeyViewController.swift */,
 			);
 			path = SubViews;
@@ -402,6 +409,7 @@
 				CEB1A02C2726FCC40085A026 /* MyExtensions.swift */,
 				CE58ABC4272610BD008690C1 /* AppDelegate.swift */,
 				CE58ABC6272610BD008690C1 /* SceneDelegate.swift */,
+				CE4E1CF0275270CC00B03F57 /* Localizable.strings */,
 				CE121C65273E82390093FD4B /* Widgets */,
 				CE2938E2272C797D0070F395 /* SubViews */,
 				CE58ABF7272610E1008690C1 /* APIs */,
@@ -487,6 +495,7 @@
 				CE366F7527480A7C005169DC /* VoucherManager.swift */,
 				CE1847A4274A71BA007C93AE /* PhoneVerificationManager.swift */,
 				CEE3B601274F03540041FE66 /* ReviewsManager.swift */,
+				CE4E1CF82752869700B03F57 /* LanguageManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -619,6 +628,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = CE58ABB8272610BD008690C1;
 			productRefGroup = CE58ABC2272610BD008690C1 /* Products */;
@@ -642,7 +652,7 @@
 				CE58ABD1272610BF008690C1 /* LaunchScreen.storyboard in Resources */,
 				CE29390E272C883E0070F395 /* MenuTabBarCell.xib in Resources */,
 				CE912A3C27393C2600639954 /* SideMenuCell.xib in Resources */,
-				CE15B37F27428407001A4F58 /* BasketViewCell.xib in Resources */,
+				CE93DCA72753C0B400CC148E /* BasketViewCell.xib in Resources */,
 				CEF3BA142740055B00FEEAE4 /* CustomButton.xib in Resources */,
 				CE58ABCE272610BF008690C1 /* Assets.xcassets in Resources */,
 				CE324EAA273A9141001A4ABF /* CustomizationCellMultiple.xib in Resources */,
@@ -653,6 +663,7 @@
 				CE912A41273944A800639954 /* SideMenuSectionCell.xib in Resources */,
 				CE324EB4273A9157001A4ABF /* CustomizationSection.xib in Resources */,
 				CE58ABCC272610BD008690C1 /* Main.storyboard in Resources */,
+				CE4E1CEE275270CC00B03F57 /* Localizable.strings in Resources */,
 				CE1847BE274BE3D3007C93AE /* SocialMediaButton.xib in Resources */,
 				CE489E2A274FEB6B002BEEC6 /* ReviewsCell.xib in Resources */,
 			);
@@ -767,6 +778,7 @@
 				CEE3B602274F03540041FE66 /* ReviewsManager.swift in Sources */,
 				CE58ABC9272610BD008690C1 /* ViewController.swift in Sources */,
 				CE75D08427494136004FAF26 /* BookeyViewController.swift in Sources */,
+				CE4E1CF92752869700B03F57 /* LanguageManager.swift in Sources */,
 				CE504AA92745B58E0081F94D /* CheckoutViewController.swift in Sources */,
 				CE293905272C87F80070F395 /* MenuItemViewCell.swift in Sources */,
 				CE58ABC5272610BD008690C1 /* AppDelegate.swift in Sources */,
@@ -788,8 +800,8 @@
 				CEB1A01E2726CD580085A026 /* GeneralAreaMapViewController.swift in Sources */,
 				CE29390F272C883E0070F395 /* MenuTabBarCell.swift in Sources */,
 				CE15B37E27428407001A4F58 /* BasketViewCell.swift in Sources */,
+				CE4E1CFE275289B200B03F57 /* LanguageViewController.swift in Sources */,
 				CEDEFCA82736B0E8008716F7 /* CategorySheetCell.swift in Sources */,
-				CE2938F5272C870D0070F395 /* HomeHeaderViewController.swift in Sources */,
 				CE58D043274FCC8D00572444 /* ReviewsViewController.swift in Sources */,
 				CE1847DA274C0A6C007C93AE /* CreateAccountViewController.swift in Sources */,
 				CE72805C27473999004663F6 /* ScheduleViewController.swift in Sources */,
@@ -842,10 +854,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		CE4E1CF0275270CC00B03F57 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE4E1CEF275270CC00B03F57 /* en */,
+				CE4E1CF4275270D100B03F57 /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		CE58ABCA272610BD008690C1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CE58ABCB272610BD008690C1 /* Base */,
+				CE4E1CE52752707700B03F57 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -858,6 +880,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		CE93DCA92753C0B400CC148E /* BasketViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE93DCA82753C0B400CC148E /* Base */,
+				CE93DCAE2753C0BE00CC148E /* ar */,
+			);
+			name = BasketViewCell.xib;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -865,6 +896,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -926,6 +958,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

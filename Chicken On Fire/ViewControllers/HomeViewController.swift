@@ -9,6 +9,7 @@ import UIKit
 import Foundation
 import SideMenu
 import ImageSlideshow
+import NicoProgress
 
 protocol MenuDelegate {
     func didSelectCategoryIndex(index: Int)
@@ -22,6 +23,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var basketButton: CustomButton!
     @IBOutlet var slideshow: ImageSlideshow!
+    @IBOutlet weak var toolbarTitle: UILabel!
+    @IBOutlet weak var restaurantName: UILabel!
+    @IBOutlet weak var restaurantDesc: UILabel!
     @IBOutlet weak var promotionLabel: UILabel!
     @IBOutlet weak var deliveryTimeLabel: UILabel!
     @IBOutlet weak var deliveryChargeLabel: UILabel!
@@ -31,34 +35,45 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var ratingFace: UIImageView!
     @IBOutlet weak var ratingStatus: UILabel!
     @IBOutlet weak var ratingCount: UILabel!
+    @IBOutlet weak var progressView: NicoProgressBar!
+    @IBOutlet weak var headerBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var burgerButton: CardView!
+    @IBOutlet weak var searchButton: CardView!
     
     private let slideshowImages = GeneralInfoManager.getGeneralInfo()?.featuredItems
     private var categoryItems = [CategoryItem]()
     
     var sideMenu: SideMenuNavigationController?
+    var restaurantRating: RestaurantRating?
     var tabBarVC = TabBarViewController()
-    var headerVC = HomeHeaderViewController()
     var searchVC = MenuSearchViewController()
     
-    var tabbarDefaultFrame = CGRect()
-    var tabbarSet = false
-    var restaurantRating: RestaurantRating?
+    let language = LanguageManager.language
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        basketButton.isEnabled = false
+        basketButton.active = false
         
         // Setting Side Menu
         let sideMenuViewController = storyboard?.instantiateViewController(identifier: "SideMenuView") as! SideMenuViewController
         sideMenuViewController.mainNavigationController = self.navigationController
         sideMenu = SideMenuNavigationController(rootViewController: sideMenuViewController)
-        sideMenu?.leftSide = true
+        sideMenu?.leftSide = language != "ar"
         sideMenu?.setNavigationBarHidden(true, animated: false)
         sideMenu?.menuWidth = UIScreen.main.bounds.width * 0.75
         sideMenu?.sideMenuDelegate = self
-        SideMenuManager.default.leftMenuNavigationController = sideMenu
+        if language != "ar" {
+            SideMenuManager.default.leftMenuNavigationController = sideMenu
+        } else {
+            SideMenuManager.default.rightMenuNavigationController = sideMenu
+        }
         SideMenuManager.default.addPanGestureToPresent(toView: self.view)
         
-        // Setting Menu
+        
+        // Getting Menu
         menuTableView.register(MenuItemViewCell.nib(), forCellReuseIdentifier: MenuItemViewCell.identifier)
         menuTableView.delegate = self
         menuTableView.dataSource = self
@@ -69,20 +84,19 @@ class HomeViewController: UIViewController {
                 self.menuTableView.reloadData()
                 
                 self.tabBarVC.setCategoryItems(categoryItems: categoryItems)
-                self.headerVC.setPromotion(categoryItems: categoryItems)
+                
+                self.progressView.isHidden = true
+                self.basketButton.isEnabled = true
+                self.basketButton.active = true
+                self.tabbar.frame = CGRect(x: 0, y: self.header.frame.height - self.tabbar.frame.height, width: self.tabbar.frame.width, height: self.tabbar.frame.height)
+                
+            
+                
             }
         }, onFailure: { error in
             print(error)
         })
         
-        // Setting Slider...
-        setSlideShow(with: slideshowImages ?? [])
-        
-        // Setting Info...
-        deliveryTimeLabel.text = "Within \(GeneralInfoManager.getGeneralInfo()!.Delivery_Time) min"
-        deliveryChargeLabel.text = "(KD \(String(format: "%.3f", GeneralInfoManager.getGeneralInfo()!.AVG_Service_Fee)))"
-        restaurantStatusView.isHidden = GeneralInfoManager.getGeneralInfo()!.status == "OPEN"
-        restaurantStatusLabel.text = GeneralInfoManager.getGeneralInfo()!.status
         
         // Getting reviews
         ReviewsApi.getAverageRating(onSuccess: { restaurantRating in
@@ -91,17 +105,40 @@ class HomeViewController: UIViewController {
                 let reviewsManager = ReviewsManager(rating: restaurantRating.getRating())
                 self.ratingFace.image = UIImage(named: reviewsManager.getFace())
                 self.ratingStatus.text = reviewsManager.getStatus()
-                self.ratingCount.text = restaurantRating.total > 1 ? "(\(restaurantRating.total) reviews)" : "(\(restaurantRating.total) review)"
+                self.ratingCount.text = restaurantRating.total > 1 ? "(\(restaurantRating.total) " + "reviews".localized() + ")" : "(\(restaurantRating.total) " + "review".localized() + ")"
                 UIView.animate(withDuration: 0.3, animations: {
                     self.ratingView.isHidden = false
                 },completion: { _ in
-                    
-                    self.tabbarDefaultFrame = self.tabbar.frame
+                    self.tabbar.frame = CGRect(x: 0, y: self.header.frame.height - self.tabbar.frame.height, width: self.tabbar.frame.width, height: self.tabbar.frame.height)
+                    self.tabbar.isHidden = false
                 })
             }
         }, onFailure: { error in
             print(error)
         })
+        
+        
+        // Setting Slider...
+        setSlideShow(with: slideshowImages ?? [])
+        
+        
+        // Setting Info...
+        restaurantName.text = RestaurantInfoManager.name
+        restaurantDesc.text = language == "ar" ? GeneralInfoManager.getGeneralInfo()!.Cuisine_Second_Language : GeneralInfoManager.getGeneralInfo()!.Cuisine
+        deliveryTimeLabel.text = "Within".localized() + " \(GeneralInfoManager.getGeneralInfo()!.Delivery_Time) " + "min".localized()
+        deliveryChargeLabel.text = "(" + "KD".localized()  + " \(String(format: "%.3f", GeneralInfoManager.getGeneralInfo()!.AVG_Service_Fee)))"
+        restaurantStatusView.isHidden = GeneralInfoManager.getGeneralInfo()!.status == "OPEN"
+        restaurantStatusLabel.text = GeneralInfoManager.getGeneralInfo()!.status?.localized()
+        
+        
+        // Setting Tab bar
+        headerBottomConstraint.constant += tabbar.frame.height
+        
+        
+        // Setting UI...
+        toolbarTitle.text = RestaurantInfoManager.name
+        burgerButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openSideMenuTap(_:))))
+        searchButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openSearchTap(_:))))
         
     }
     
@@ -110,8 +147,6 @@ class HomeViewController: UIViewController {
         if segue.identifier == "TabBarSegue" {
             tabBarVC = segue.destination as! TabBarViewController
             tabBarVC.menuDelegate = self
-        } else if segue.identifier == "HeaderSegue" {
-            headerVC = segue.destination as! HomeHeaderViewController
         } else if segue.identifier == "MenuSearchSegue" {
             searchVC = segue.destination as! MenuSearchViewController
             searchVC.categoryItems = categoryItems
@@ -177,7 +212,7 @@ class HomeViewController: UIViewController {
             for menuItem in categoryItem.menuItems {
                 if menuItem.discount > bestDiscount {
                     bestDiscount = menuItem.discount
-                    promotionLabel.text = "\(menuItem.discount)% on \(menuItem.name)"
+                    promotionLabel.text = "\(menuItem.discount)% " + "on".localized() + " \(menuItem.name)"
                 }
             }
         }
@@ -209,6 +244,16 @@ class HomeViewController: UIViewController {
     }
     
     
+    @objc func openSideMenuTap(_ sender: Any) {
+        present(sideMenu!, animated: true, completion: nil)
+    }
+    
+    @objc func openSearchTap(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: "MenuSearchStoryboard") as! MenuSearchViewController
+        vc.categoryItems = categoryItems
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -221,7 +266,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = Bundle.main.loadNibNamed("MenuSectionHeader", owner: self, options: nil)?.first as! MenuSectionHeader
-        header.title.text = categoryItems[section].title
+        header.title.text = language == "en" ? categoryItems[section].title : categoryItems[section].titleAr
         header.layer.zPosition = -1
         return header
     }
@@ -273,12 +318,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if menuTableView.contentOffset.y > header.frame.height - toolbar.frame.height - tabbar.frame.height - UIApplication.topSafeAreaHeight {
             toolbar.isHidden = false
-            tabbar.frame = CGRect(x: tabbar.frame.minX, y: toolbar.frame.height + menuTableView.contentOffset.y + UIApplication.topSafeAreaHeight, width: tabbar.frame.width, height: tabbar.frame.height)
+            tabbar.frame = CGRect(x: 0, y: toolbar.frame.height + UIApplication.topSafeAreaHeight, width: tabbar.frame.width, height: tabbar.frame.height)
             UIApplication.shared.statusBarUIView?.backgroundColor = .white
         } else {
             menuTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
             toolbar.isHidden = true
-            tabbar.frame = tabbarDefaultFrame
+            self.tabbar.frame = CGRect(x: 0, y: self.header.frame.height - self.tabbar.frame.height - scrollView.contentOffset.y, width: self.tabbar.frame.width, height: self.tabbar.frame.height)
             UIApplication.shared.statusBarUIView?.backgroundColor = .clear
         }
     }

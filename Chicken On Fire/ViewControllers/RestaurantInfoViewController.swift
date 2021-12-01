@@ -31,6 +31,8 @@ class RestaurantInfoViewController: UIViewController {
     @IBOutlet weak var knetView: UIStackView!
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
+    
+    let language = LanguageManager.language
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,11 +47,11 @@ class RestaurantInfoViewController: UIViewController {
         restaurantCover.layer.masksToBounds = true
         
         restaurantName.text = RestaurantInfoManager.name
-        restaurantDesc.text = generalInfo.Cuisine
-        deliveryTime.text = "\(generalInfo.Delivery_Time) min"
+        restaurantDesc.text = language == "en" ? generalInfo.Cuisine : generalInfo.Cuisine_Second_Language
+        deliveryTime.text = "\(generalInfo.Delivery_Time) " +  "min".localized()
         minimumOrder.text = "\(String(format: "%.3f", generalInfo.Minimum_Order)) KD"
         serviceCharge.text = "\(String(format: "%.3f", generalInfo.AVG_Service_Fee)) KD"
-        preOrder.text = generalInfo.Pre_Order ? "Yes" : "No"
+        preOrder.text = generalInfo.Pre_Order ? "YES".localized() : "NO".localized()
         area.text = RestaurantInfoManager.restaurantArea
         monday.text = getWorkingDayTime(openingTime: generalInfo.openingTimes!.Monday)
         tuesday.text = getWorkingDayTime(openingTime: generalInfo.openingTimes!.Tuesday)
@@ -85,11 +87,11 @@ class RestaurantInfoViewController: UIViewController {
     
     private func getWorkingHours(hour: Int, minute: Int) -> String {
         if hour > 12 {
-            return "\(String(format: "%02d", hour - 12)):\(String(format: "%02d", minute)) PM"
+            return "\(String(format: "%02d", hour - 12)):\(String(format: "%02d", minute)) " + "PM".localized()
         } else if hour == 0 {
-            return "12:\(String(format: "%02d", minute)) AM"
+            return "12:\(String(format: "%02d", minute)) " + "AM".localized()
         } else {
-            return "\(String(format: "%02d", hour)):\(String(format: "%02d", minute)) AM"
+            return "\(String(format: "%02d", hour)):\(String(format: "%02d", minute)) " + "AM".localized()
         }
     }
 

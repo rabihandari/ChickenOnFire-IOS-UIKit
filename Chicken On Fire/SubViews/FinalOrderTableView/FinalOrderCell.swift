@@ -14,6 +14,8 @@ class FinalOrderCell: UITableViewCell {
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
+    let language = LanguageManager.language
+    
     static let identifier = "FinalOrderCell"
     static func nib() -> UINib {
         return UINib(nibName: "FinalOrderCell", bundle: nil)
@@ -31,10 +33,10 @@ class FinalOrderCell: UITableViewCell {
     }
     
     func configure(basketItem: BasketItem) {
-        titleLabel.text = basketItem.itemName
+        titleLabel.text = language == "en" ? basketItem.itemName : basketItem.itemNameAr
         descLabel.text = getAddonsString(basketItem: basketItem)
         quantityLabel.text = "\(basketItem.quantity)"
-        priceLabel.text = "\(String(format: "%.3f", basketItem.totalPrice)) K.D"
+        priceLabel.text = "\(String(format: "%.3f", basketItem.totalPrice)) " + "K.D".localized()
     }
     
     
@@ -42,7 +44,7 @@ class FinalOrderCell: UITableViewCell {
     func getAddonsString(basketItem: BasketItem) -> String {
         var addonsNames = [String]()
         for addon in basketItem.addons {
-            addonsNames.append(addon.name)
+            addonsNames.append(language == "en" ? addon.name : addon.nameAr)
         }
         return addonsNames.joined(separator: ", ")
     }

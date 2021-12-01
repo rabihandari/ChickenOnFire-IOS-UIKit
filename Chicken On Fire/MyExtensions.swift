@@ -153,3 +153,20 @@ extension UIApplication {
         }
     }
 }
+
+
+extension String {
+    func localized() -> String {
+        var lang = UserDefaults.standard.string(forKey: "Language")
+        if lang == nil {
+            lang = "en"
+            UserDefaults.standard.setValue("en", forKey: "Language")
+        }
+        let path = Bundle.main.path(forResource: lang, ofType: "lproj")
+        let bundle = Bundle(path: path!)
+
+        return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
+
+    }
+}
+

@@ -31,9 +31,11 @@ class MenuApi {
                             }
                             menuItems.append(MenuItem(id: menuItem.pk, name: menuItem.nm, nameAr: menuItem.nmL, desicription: menuItem.ds, desicriptionAr: menuItem.dsL, price: menuItem.pr, discount: menuItem.dis, image: menuItem.img ?? "", contains: flavours))
                         }
-                        categoryItems.append(CategoryItem(title: categoryItem.nm, titleAr: categoryItem.nmL, menuItems: menuItems))
-                        onSuccess?(categoryItems)
+                        if menuItems.count > 0 {
+                            categoryItems.append(CategoryItem(title: categoryItem.nm, titleAr: categoryItem.nmL, menuItems: menuItems))
+                        }
                     }
+                    onSuccess?(categoryItems)
                     
                 } catch {
                     onFailure?(error.localizedDescription)
@@ -61,8 +63,10 @@ class MenuApi {
                     for category in decoded {
                         var addons = [Addon]()
                         for addon in category.ao {
-                            addons.append(Addon(aid: addon.aid, name: addon.nm, nameAr: addon.nmL, price: addon.pr, overrideFree: addon.ovf))
+                            let price = category.fr ? 0 : addon.pr
+                            addons.append(Addon(aid: addon.aid, name: addon.nm, nameAr: addon.nmL, price: addon.ovf ? addon.pr : price, overrideFree: addon.ovf))
                         }
+                        
                         categories.append(AddonCategory(header: category.hd, headerAr: category.hdL, free: category.fr, optional: category.opt, chooseMax: category.cMx, chooseMin: category.cMn, items: addons))
                         
                     }

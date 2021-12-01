@@ -8,15 +8,11 @@
 import Foundation
 
 class ScheduleOrder {
-    static func checkIfValid(branchId: Int, schedule: Date, onSuccess: ((Bool) -> Void)?, onFailure: ((String) -> Void)?) -> Void {
+    static func checkIfValid(branchId: Int, date: String, onSuccess: ((Bool) -> Void)?, onFailure: ((String) -> Void)?) -> Void {
         guard let url = URL(string: RestaurantInfoManager.backendURL + "/mobile-api/schedule-validity") else {
             onFailure?("Failed to get URL")
             return
         }
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "Y-MM-dd HH:MM:SS"
-        let date = formatter.string(from: schedule)
         
         
         let parameters: [String: Any] = [

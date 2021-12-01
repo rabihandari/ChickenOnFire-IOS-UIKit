@@ -39,43 +39,43 @@ class SideMenuViewController: UIViewController {
         // Main Section
         var mainItems: [SideMenuItem] = []
         if user.authenticated {
-            mainItems.append(SideMenuItem(title: "Sign Out", image: UIImage(systemName: "person")!, onClick: signOut))
+            mainItems.append(SideMenuItem(title: "Sign Out".localized(), image: UIImage(systemName: "person")!, onClick: signOut))
         } else {
-            mainItems.append(SideMenuItem(title: "Sign In", image: UIImage(systemName: "person")!, onClick: signIn))
+            mainItems.append(SideMenuItem(title: "Sign In".localized(), image: UIImage(systemName: "person")!, onClick: signIn))
         }
         if user.authenticated {
-            mainItems.append(SideMenuItem(title: "Favourites", image: UIImage(systemName: "star")!, onClick: openFavourites))
+            mainItems.append(SideMenuItem(title: "Favourites".localized(), image: UIImage(systemName: "star")!, onClick: openFavourites))
         }
-        mainItems.append(SideMenuItem(title: "Share", image: UIImage(systemName: "square.and.arrow.up")!, onClick: shareApp))
-        mainItems.append(SideMenuItem(title: "Visit Website", image: UIImage(systemName: "globe")!, onClick: {
+        mainItems.append(SideMenuItem(title: "Share".localized(), image: UIImage(systemName: "square.and.arrow.up")!, onClick: shareApp))
+        mainItems.append(SideMenuItem(title: "Visit Website".localized(), image: UIImage(systemName: "globe")!, onClick: {
             self.openUrl(_url: RestaurantInfoManager.backendURL)
         }))
-        mainItems.append(SideMenuItem(title: "Language", image: UIImage(systemName: "textformat")!, onClick: { print("Language") }))
+        mainItems.append(SideMenuItem(title: "Language".localized(), image: UIImage(systemName: "textformat")!, onClick: openLanguageDialog))
         items.append(SideMenuSection(title: "", items: mainItems))
         
         // Social Media Section
         var socialMediaItems: [SideMenuItem] = []
-        socialMediaItems.append(SideMenuItem(title: "Facebook", image: UIImage(named: "ic_facebook_blue")!, onClick: openFacebook))
-        socialMediaItems.append(SideMenuItem(title: "Instagram", image: UIImage(named: "ic_instagram")!, onClick: openInstagram))
-        socialMediaItems.append(SideMenuItem(title: "Twitter", image: UIImage(named: "ic_twitter")!, onClick: openTwitter))
-        items.append(SideMenuSection(title: "Social Media", items: socialMediaItems))
+        socialMediaItems.append(SideMenuItem(title: "Facebook".localized(), image: UIImage(named: "ic_facebook_blue")!, onClick: openFacebook))
+        socialMediaItems.append(SideMenuItem(title: "Instagram".localized(), image: UIImage(named: "ic_instagram")!, onClick: openInstagram))
+        socialMediaItems.append(SideMenuItem(title: "Twitter".localized(), image: UIImage(named: "ic_twitter")!, onClick: openTwitter))
+        items.append(SideMenuSection(title: "Social Media".localized(), items: socialMediaItems))
         
         // Contact Us Section
         var contactUsItems: [SideMenuItem] = []
-        contactUsItems.append(SideMenuItem(title: "Dial", image: UIImage(systemName: "phone")!, onClick: dialNumber))
-        contactUsItems.append(SideMenuItem(title: "Email", image: UIImage(systemName: "envelope")!, onClick: emailVendor))
-        items.append(SideMenuSection(title: "Contact Us", items: contactUsItems))
+        contactUsItems.append(SideMenuItem(title: "Dial".localized(), image: UIImage(systemName: "phone")!, onClick: dialNumber))
+        contactUsItems.append(SideMenuItem(title: "Email".localized(), image: UIImage(systemName: "envelope")!, onClick: emailVendor))
+        items.append(SideMenuSection(title: "Contact Us".localized(), items: contactUsItems))
         
         // Others Section
         var otherItems: [SideMenuItem] = []
-        otherItems.append(SideMenuItem(title: "Our digital experts", image: UIImage(), onClick: {
+        otherItems.append(SideMenuItem(title: "Our digital experts".localized(), image: UIImage(), onClick: {
             self.openUrl(_url: GeneralInfoManager.getGeneralInfo()!.Digital_Experts)
         }))
-        otherItems.append(SideMenuItem(title: "Privacy Policy", image: UIImage(), onClick: {
+        otherItems.append(SideMenuItem(title: "Privacy Policy".localized(), image: UIImage(), onClick: {
             self.openUrl(_url: GeneralInfoManager.getGeneralInfo()!.Privacy_Policy)
             
         }))
-        items.append(SideMenuSection(title: "Other", items: otherItems))
+        items.append(SideMenuSection(title: "Other".localized(), items: otherItems))
         
         
     }
@@ -85,29 +85,29 @@ class SideMenuViewController: UIViewController {
         
         let account = UserAccountManager.savedUserAccount()
         if items[0].items.contains(where: { sideItem in
-            sideItem.title == "Favourites" || sideItem.title == "Favourites"
+            sideItem.title == "Favourites".localized() || sideItem.title == "Favourites".localized()
         }) && account.authenticated {
             return
         }
         
         if items[0].items.contains(where: { sideItem in
-            sideItem.title == "Sign In"
+            sideItem.title == "Sign In".localized()
         }) && !account.authenticated {
             return
         }
         
         if account.authenticated {
             items[0].items.removeAll(where: { item in
-                item.title == "Sign In"
+                item.title == "Sign In".localized()
             })
-            items[0].items.insert(SideMenuItem(title: "Favourites", image: UIImage(systemName: "star")!, onClick: self.openFavourites), at: 0)
-            items[0].items.insert(SideMenuItem(title: "Sign Out", image: UIImage(systemName: "person")!, onClick: self.signOut), at: 0)
+            items[0].items.insert(SideMenuItem(title: "Favourites".localized(), image: UIImage(systemName: "star")!, onClick: self.openFavourites), at: 0)
+            items[0].items.insert(SideMenuItem(title: "Sign Out".localized(), image: UIImage(systemName: "person")!, onClick: self.signOut), at: 0)
             tableView.reloadData()
         } else {
             items[0].items.removeAll(where: { item in
-                item.title == "Sign Out" || item.title == "Favourites"
+                item.title == "Sign Out".localized() || item.title == "Favourites".localized()
             })
-            items[0].items.insert(SideMenuItem(title: "Sign In", image: UIImage(systemName: "person")!, onClick: signIn), at: 0)
+            items[0].items.insert(SideMenuItem(title: "Sign In".localized(), image: UIImage(systemName: "person")!, onClick: signIn), at: 0)
             tableView.reloadData()
         }
     }
@@ -174,10 +174,10 @@ extension SideMenuViewController {
             
             // Update Drawer items
             self.items[0].items.removeAll(where: { item in
-                item.title == "Sign In"
+                item.title == "Sign In".localized()
             })
-            self.items[0].items.insert(SideMenuItem(title: "Favourites", image: UIImage(systemName: "star")!, onClick: self.openFavourites), at: 0)
-            self.items[0].items.insert(SideMenuItem(title: "Sign Out", image: UIImage(systemName: "person")!, onClick: self.signOut), at: 0)
+            self.items[0].items.insert(SideMenuItem(title: "Favourites".localized(), image: UIImage(systemName: "star")!, onClick: self.openFavourites), at: 0)
+            self.items[0].items.insert(SideMenuItem(title: "Sign Out".localized(), image: UIImage(systemName: "person")!, onClick: self.signOut), at: 0)
             self.tableView.reloadData()
         }
         self.dismiss(animated: true, completion: {
@@ -189,9 +189,9 @@ extension SideMenuViewController {
     private func signOut() {
         UserAccountManager.resetUserAccount()
         items[0].items.removeAll(where: { item in
-            item.title == "Sign Out" || item.title == "Favourites"
+            item.title == "Sign Out".localized() || item.title == "Favourites".localized()
         })
-        items[0].items.insert(SideMenuItem(title: "Sign In", image: UIImage(systemName: "person")!, onClick: signIn), at: 0)
+        items[0].items.insert(SideMenuItem(title: "Sign In".localized(), image: UIImage(systemName: "person")!, onClick: signIn), at: 0)
         tableView.reloadData()
     }
     
@@ -203,6 +203,18 @@ extension SideMenuViewController {
         })
     }
     
+    
+    private func openLanguageDialog() {
+        let vc = storyboard?.instantiateViewController(identifier: "LanguageStoryboard") as! LanguageViewController
+        vc.onLanguageSelected = {
+            let alert = UIAlertController(title: "Language Changed".localized(), message: "Please restart the app to update the language changes".localized(), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK".localized(), style: .default, handler: nil))
+            self.mainNavigationController.present(alert, animated: true, completion: nil)
+        }
+        self.dismiss(animated: true, completion: {
+            self.mainNavigationController.present(vc, animated: true, completion: nil)
+        })
+    }
     
     private func emailVendor() {
         let mailtoString = "mailto:\(GeneralInfoManager.getGeneralInfo()!.Vendor_Email)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)

@@ -26,17 +26,17 @@ enum CustomButtonStyle {
     
     @IBInspectable var leftTitle: String? {
         didSet {
-            leftLabel.text = leftTitle
+            leftLabel.text = leftTitle?.localized()
         }
     }
     @IBInspectable var rightTitle: String? {
         didSet {
-            rightLabel.text = rightTitle
+            rightLabel.text = rightTitle?.localized()
         }
     }
     @IBInspectable var middleTitle: String? {
         didSet {
-            middleLabel.text = middleTitle
+            middleLabel.text = middleTitle?.localized()
         }
     }
     

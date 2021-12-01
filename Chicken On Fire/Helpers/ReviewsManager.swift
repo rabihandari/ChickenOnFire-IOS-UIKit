@@ -43,17 +43,17 @@ class ReviewsManager {
     func getStatus() -> String {
         switch self.getAverage() {
         case 1:
-            return "Very Bad"
+            return "Very Bad".localized()
         case 2:
-            return "Bad"
+            return "Bad".localized()
         case 3:
-            return "Good"
+            return "Good".localized()
         case 4:
-            return "Very Good"
+            return "Very Good".localized()
         case 5:
-            return "Amazing"
+            return "Amazing".localized()
         default:
-            return "Very Good"
+            return "Very Good".localized()
         }
     }
     

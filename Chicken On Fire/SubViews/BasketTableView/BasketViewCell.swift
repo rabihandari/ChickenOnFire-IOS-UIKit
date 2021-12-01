@@ -21,6 +21,8 @@ class BasketViewCell: UITableViewCell {
     var onItemChange: (() -> Void)?
     var onItemRemoved: (() -> Void)?
     
+    let language = LanguageManager.language
+    
     static let identifier = "BasketViewCell"
     static func nib() -> UINib {
         return UINib(nibName: "BasketViewCell", bundle: nil)
@@ -43,10 +45,10 @@ class BasketViewCell: UITableViewCell {
     
     func configure(basketItem: BasketItem, hasDivider: Bool, available: Bool) {
         self.basketItem = basketItem
-        itemTitle.text = basketItem.itemName
+        itemTitle.text = language == "en" ? basketItem.itemName : basketItem.itemNameAr
         itemDesc.text = getAddonsString(basketItem: basketItem)
         itemImage.sd_setImage(with: URL(string: basketItem.imageUrl))
-        itemPrice.text = "\(String(format: "%.3f",basketItem.totalPrice)) K.D"
+        itemPrice.text = "\(String(format: "%.3f",basketItem.totalPrice)) " + "K.D".localized()
         itemQuantity.text = "\(basketItem.quantity)"
         divider.isHidden = !hasDivider
         errorMessage.isHidden = available
@@ -55,7 +57,7 @@ class BasketViewCell: UITableViewCell {
     func getAddonsString(basketItem: BasketItem) -> String {
         var addonsNames = [String]()
         for addon in basketItem.addons {
-            addonsNames.append(addon.name)
+            addonsNames.append(language == "en" ? addon.name : addon.nameAr)
         }
         return addonsNames.joined(separator: ", ")
     }

@@ -16,11 +16,14 @@ class MenuTabBarCell: UICollectionViewCell {
     
     @IBOutlet var title: UILabel!
     @IBOutlet var line: UIView!
+    
+    let language = LanguageManager.language
 
     override func awakeFromNib() {
         super.awakeFromNib()
         line.layer.cornerRadius = 5;
         line.layer.masksToBounds = true;
+        self.contentView.transform = CGAffineTransform(scaleX: language == "ar" ? -1.0 : 1.0, y: 1.0)
     }
     
     func configure(with title: String, selected: Bool) -> Void {

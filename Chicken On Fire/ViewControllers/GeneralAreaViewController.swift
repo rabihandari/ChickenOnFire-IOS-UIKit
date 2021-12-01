@@ -10,6 +10,7 @@ import UIKit
 class GeneralAreaViewController: UIViewController, GeneralAreaDelegate {
 
     @IBOutlet weak var showMapView: UIView!
+    @IBOutlet weak var restaurantName: UILabel!
     @IBOutlet weak var areaName: UILabel!
     @IBOutlet weak var showMenuButton: UIButton!
     @IBOutlet weak var downArrow: UIImageView!
@@ -19,6 +20,9 @@ class GeneralAreaViewController: UIViewController, GeneralAreaDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Init ...
+        restaurantName.text = RestaurantInfoManager.name
         
         // Setting Show Menu button style
         showMenuButton.layer.cornerRadius = 10
@@ -37,6 +41,8 @@ class GeneralAreaViewController: UIViewController, GeneralAreaDelegate {
         // Initialize tap gesture
         let tapGestureRecognized = UITapGestureRecognizer(target: self, action: #selector(goToMapView(_:)))
         showMapView.addGestureRecognizer(tapGestureRecognized)
+        
+        
     }
     
     func setShowMenuEnabled() -> Void {

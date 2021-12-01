@@ -15,6 +15,8 @@ class CatergorySheetViewController: UIViewController {
     var menuDelegate: MenuDelegate?
     var tabBarDelegate: MenuTabBarDelegate?
     
+    let language = LanguageManager.language
+    
     // temps
     var statusBarColor: CGColor?
     
@@ -33,10 +35,10 @@ class CatergorySheetViewController: UIViewController {
         
     }
     
-    func setCategoryItems(categoryItems: [CategoryItem]) -> Void {
-        self.categoryItems = categoryItems
-        categoryTableView.reloadData()
-    }
+//    func setCategoryItems(categoryItems: [CategoryItem]) -> Void {
+//        self.categoryItems = categoryItems
+//        categoryTableView.reloadData()
+//    }
     
     @IBAction func hideSheet(sender: AnyObject) {
         UIApplication.shared.statusBarUIView?.backgroundColor = UIColor(cgColor: statusBarColor ?? CGColor(gray: 0, alpha: 0))
@@ -53,7 +55,7 @@ extension CatergorySheetViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CategorySheetCell.identifier, for: indexPath) as! CategorySheetCell
-        cell.configure(title: categoryItems[indexPath.row].title, number: categoryItems[indexPath.row].menuItems.count, hasDivider: indexPath.row != categoryItems.count - 1)
+        cell.configure(title: language == "en" ? categoryItems[indexPath.row].title: categoryItems[indexPath.row].titleAr, number: categoryItems[indexPath.row].menuItems.count, hasDivider: indexPath.row != categoryItems.count - 1)
         return cell
     }
     

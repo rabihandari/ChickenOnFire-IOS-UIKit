@@ -13,6 +13,8 @@ class CustomizationCellSingle: UITableViewCell {
     @IBOutlet weak var addOnPrice: UILabel!
     @IBOutlet weak var radioButton: UIImageView!
     
+    let language = LanguageManager.language
+    
     static let identifier = "CustomizationCellSingle"
     static func nib() -> UINib {
         return UINib(nibName: "CustomizationCellSingle", bundle: nil)
@@ -27,9 +29,9 @@ class CustomizationCellSingle: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configure(addon: Addon, selected: Bool) {
-        addOnName.text = addon.name
-        addOnPrice.text = "KD \(String(format: "%.3f", addon.price))"
+    func configure(addon: Addon, selected: Bool, free: Bool) {
+        addOnName.text = language == "en" ? addon.name : addon.nameAr
+        addOnPrice.text = "KD".localized() +  " \(String(format: "%.3f", addon.price))"
         
         if selected {
             radioButton.image = UIImage(systemName: "smallcircle.fill.circle")
@@ -37,6 +39,15 @@ class CustomizationCellSingle: UITableViewCell {
         } else {
             radioButton.image = UIImage(systemName: "circle")
             radioButton.tintColor = .darkGray
+        }
+        
+        if free {
+            addOnPrice.isHidden = true
+            if addon.overrideFree {
+                addOnPrice.isHidden = false
+            }
+        } else {
+            addOnPrice.isHidden = false
         }
     }
     

@@ -14,7 +14,7 @@ class ScheduleViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     
     var selectedDate: Date?
-    var onSchedulePicked: ((Date) -> Void)?
+    var onSchedulePicked: ((String) -> Void)?
     var onScheduleRemoved: (() -> Void)?
 
     override func viewDidLoad() {
@@ -22,7 +22,7 @@ class ScheduleViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         if selectedDate != nil {
-            cancelButton.setTitle("Remove", for: .normal)
+            cancelButton.setTitle("Remove".localized(), for: .normal)
         }
         
         let today = Date()
@@ -47,7 +47,14 @@ class ScheduleViewController: UIViewController {
         guard let onSchedulePicked = onSchedulePicked else {
             return
         }
-        onSchedulePicked(datePicker.date)
+        
+        
+        let formater = DateFormatter()
+        formater.locale = Locale(identifier: "en_US")
+        formater.dateFormat = "Y-MM-dd HH:MM:SS"
+        let englishDate = formater.string(from: datePicker.date)
+        
+        onSchedulePicked(englishDate)
         dismiss(animated: true, completion: nil)
     }
     

@@ -9,6 +9,7 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
+
 class GeneralAreaMapViewController: UIViewController {
     
     @IBOutlet var mapView: GMSMapView!
@@ -17,14 +18,27 @@ class GeneralAreaMapViewController: UIViewController {
     @IBOutlet weak var locationSheet: UIView!
     @IBOutlet weak var areaName: UILabel!
     @IBOutlet weak var sheetHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var myLocationView: CardView!
 
     var delegate: GeneralAreaDelegate?
+    var currentLocation: CLLocationCoordinate2D?
     
     var polylines = [GMSPolyline]()
+    let locationManager = CLLocationManager()
     var selectedCoordinates = GeneralAreaManager.getSavedArea().getCoordinates()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Current device location...
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        myLocationView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(currentLocation(_:))))
         
         // Init search bar
         searchBar.backgroundImage = UIImage()
@@ -104,6 +118,14 @@ class GeneralAreaMapViewController: UIViewController {
     }
     
     
+    @objc func currentLocation(_ sender: Any) {
+        guard let currentLocation = currentLocation else {
+            return
+        }
+        mapView.animate(to: GMSCameraPosition(target: currentLocation, zoom: 11))
+        selectedCoordinates = currentLocation
+    }
+    
 }
 
 
@@ -170,5 +192,13 @@ extension GeneralAreaMapViewController: UISearchBarDelegate {
         autocompleteController.autocompleteFilter = GMSAutocompleteFilter.myFilter
         
         present(autocompleteController, animated: true, completion: nil)
+    }
+}
+
+
+extension GeneralAreaMapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        self.currentLocation = locValue
     }
 }

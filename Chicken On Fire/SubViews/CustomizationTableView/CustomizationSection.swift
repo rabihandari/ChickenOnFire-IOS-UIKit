@@ -14,6 +14,8 @@ class CustomizationSection: UITableViewCell {
     @IBOutlet weak var arrow: UIImageView!
     @IBOutlet weak var requiredLabel: UILabel!
     
+    let language = LanguageManager.language
+    
     static let identifier = "CustomizationSection"
     static func nib() -> UINib {
         return UINib(nibName: "CustomizationSection", bundle: nil)
@@ -23,6 +25,8 @@ class CustomizationSection: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        requiredLabel.text = "This is required".localized()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,16 +36,16 @@ class CustomizationSection: UITableViewCell {
     }
     
     func configure(addonCategory: AddonCategory, isOpened: Bool) {
-        headerTitle.text = addonCategory.header
+        headerTitle.text = language == "en" ? addonCategory.header : addonCategory.headerAr
         
         if addonCategory.chooseMin == -1 && addonCategory.chooseMax == -1 {
-            headerInstruction.text = "Choose items from the list"
+            headerInstruction.text = "Choose items from the list".localized()
         } else if addonCategory.chooseMin == 1 && addonCategory.chooseMax == 1 {
-            headerInstruction.text = "Choose 1 item from the list"
+            headerInstruction.text = "Choose 1 item from the list".localized()
         } else if addonCategory.chooseMin == 0 && addonCategory.chooseMax > 1 {
-            headerInstruction.text = "Choose up to \(addonCategory.chooseMax) items from the list"
+            headerInstruction.text = "Choose up to".localized() + " \(addonCategory.chooseMax) " + "items from the list".localized()
         } else {
-            headerInstruction.text = "Choose between \(addonCategory.chooseMin) and \(addonCategory.chooseMax) items from the list"
+            headerInstruction.text = "Choose between".localized() + "\(addonCategory.chooseMin) " + "and".localized() + " \(addonCategory.chooseMax) " + "items from the list".localized()
         }
         
         let angle: CGFloat = isOpened ? 0 : 180

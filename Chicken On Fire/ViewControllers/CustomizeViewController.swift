@@ -44,6 +44,7 @@ class CustomizeViewController: UIViewController {
     var onBackPressed: (() -> Void)?
     var addOnCategoriesModel = [AddonCategroyModel]()
     var selectedAddons = [AddonCategory: [Addon]]()
+    let language = LanguageManager.language
     
     var quantity = 1
     var specialRequest = ""
@@ -63,25 +64,32 @@ class CustomizeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addToBasketButton.isEnabled = false
+        addToBasketButton.active = false
         UIApplication.shared.statusBarUIView?.backgroundColor = .clear
 
         // Initializing Info...
         guard let menuItem = self.menuItem else {
             return
         }
-        itemName.text = menuItem.name
+        itemName.text = language == "en" ? menuItem.name: menuItem.nameAr
         let urlString = RestaurantInfoManager.backendURL + menuItem.image
-        headerImage.sd_setImage(with: URL(string: urlString))
-        itemDesc.text = menuItem.desicription
-        itemPrice.text = "KD \(String(format: "%.3f", menuItem.price))"
-        addToBasketButton.leftTitle = "KD \(String(format: "%.3f", menuItem.price))"
+        if !menuItem.image.isEmpty {
+            headerImage.sd_setImage(with: URL(string: urlString))
+        } else {
+            headerImage.image = UIImage(named: "default-item-img")
+        }
+        
+        itemDesc.text = language == "en" ? menuItem.desicription: menuItem.desicriptionAr
+        itemPrice.text = "KD".localized() +  " \(String(format: "%.3f", menuItem.price))"
+        addToBasketButton.leftTitle = "KD".localized() +  " \(String(format: "%.3f", menuItem.price))"
         if menuItem.discount > 0 {
             let newPrice = menuItem.price - (menuItem.price * menuItem.discount/100)
-            itemNewPrice.text = "KD \(String(format: "%.3f", newPrice))"
+            itemNewPrice.text = "KD".localized() +  " \(String(format: "%.3f", newPrice))"
             itemPrice.textColor = .darkGray
             discountLine.isHidden = false
             itemNewPrice.isHidden = false
-            addToBasketButton.leftTitle = "KD \(String(format: "%.3f", newPrice))"
+            addToBasketButton.leftTitle = "KD".localized() +  " \(String(format: "%.3f", newPrice))"
         }
         
         // Setting table view...
@@ -102,6 +110,7 @@ class CustomizeViewController: UIViewController {
                 self.customizationTableView.reloadData()
                 self.progressBar.isHidden = true
                 self.addToBasketButton.active = true
+                self.addToBasketButton.isEnabled = true
                 if addonCategories.count == 0 {
                     self.divider.isHidden = true
                 }
@@ -247,7 +256,7 @@ class CustomizeViewController: UIViewController {
         }
         
         totalPrice = totalPrice * Double(quantity)
-        addToBasketButton.leftTitle = "KD \(String(format: "%.3f", totalPrice))"
+        addToBasketButton.leftTitle = "KD".localized() +  " \(String(format: "%.3f", totalPrice))"
     }
     
     func updateSatisfaction(addonCategory: AddonCategory) {
@@ -262,7 +271,9 @@ class CustomizeViewController: UIViewController {
             guard let index = addOnCategoriesModel.firstIndex(where: {
                 $0.addonCategory == addonCategory
             }) else { return }
-            let cell = customizationTableView.cellForRow(at: IndexPath(row: 0, section: index)) as! CustomizationSection
+            guard let cell = customizationTableView.cellForRow(at: IndexPath(row: 0, section: index)) as? CustomizationSection else {
+                return
+            }
             cell.hideRequired()
         }
     }
@@ -324,12 +335,12 @@ extension CustomizeViewController: UITableViewDelegate, UITableViewDataSource {
             
             if !isMultiple(addonCategory: addOnCategory) {
                 let cell = tableView.dequeueReusableCell(withIdentifier: CustomizationCellSingle.identifier, for: indexPath) as! CustomizationCellSingle
-                cell.configure(addon: addOn, selected: isSelected(addonCategory: addOnCategory, addon: addOn))
+                cell.configure(addon: addOn, selected: isSelected(addonCategory: addOnCategory, addon: addOn), free: addOnCategory.free)
                 
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: CustomizationCellMultiple.identifier, for: indexPath) as! CustomizationCellMultiple
-                cell.configure(addon: addOn, selected: isSelected(addonCategory: addOnCategory, addon: addOn))
+                cell.configure(addon: addOn, selected: isSelected(addonCategory: addOnCategory, addon: addOn), free: addOnCategory.free)
                 return cell
             }
             

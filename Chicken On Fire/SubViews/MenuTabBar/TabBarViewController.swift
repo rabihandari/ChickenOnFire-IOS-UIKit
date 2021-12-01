@@ -22,6 +22,7 @@ class TabBarViewController: UIViewController {
     var tabBarDelegate: MenuTabBarDelegate?
     
     var selectedIndex = 0
+    let language = LanguageManager.language
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,8 @@ class TabBarViewController: UIViewController {
         tabBarCollectionView.register(MenuTabBarCell.nib(), forCellWithReuseIdentifier: MenuTabBarCell.identifier)
         tabBarCollectionView.delegate = self
         tabBarCollectionView.dataSource = self
+        tabBarCollectionView.transform = CGAffineTransform(scaleX: language == "ar" ? -1.0 : 1.0, y: 1.0)
+        
         
         tabBarDelegate = self
         
@@ -62,7 +65,7 @@ extension TabBarViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = tabBarCollectionView.dequeueReusableCell(withReuseIdentifier: MenuTabBarCell.identifier, for: indexPath) as! MenuTabBarCell
-        cell.configure(with: menuCategories[indexPath.row].title, selected: self.selectedIndex == indexPath.row)
+        cell.configure(with: language == "en" ? menuCategories[indexPath.row].title : menuCategories[indexPath.row].titleAr, selected: self.selectedIndex == indexPath.row)
         return cell
     }
     
